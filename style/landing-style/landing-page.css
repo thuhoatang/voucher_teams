@@ -39,7 +39,10 @@ body{
 /* button category */
 #listview-category {
     display: none;
+    position: relative;
+    top: -25px; 
 }
+
 
 #listview-category .iconify.ml-2.mr-5{
     color: #e94560;
@@ -59,8 +62,8 @@ body{
 
 /* user btn */
 #btn-cart , #btn-user02{
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
 
 }
 .btn_cart , .btn_user{
@@ -73,8 +76,8 @@ body{
 #listview-user{
     position: relative;
     margin-top: -20px;
-    right: -10%; 
- 
+    top: -5px;
+    right: -10%;
 }
 #listview-user li{
     border: none;
@@ -98,6 +101,12 @@ body{
 .container_menu_header ul li{
     list-style-type: none;
 }
+
+.container_menu_header{
+    padding-bottom: 20px;
+}
+/* resp for search-bar */
+
 
 /* part 2 */
 .container-fluid.category-slide{
