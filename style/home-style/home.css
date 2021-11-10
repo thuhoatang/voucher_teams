@@ -105,4 +105,46 @@ body{
 .container_menu_header{
     padding-bottom: 20px;
 }
-/* resp for search-bar */
+
+/* Part 2: Main */
+.main-home{
+    height: 5000px;
+    /* background-color: #e6a7ad; */
+    position: relative;
+    top: 120px;
+}
+/* Part 2.1: Search filter */
+.main-home .search_filter {
+    font-size: 13px;
+    background-color: rgb(250, 250, 240);
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    box-shadow: rgb(182, 178, 174, 0.2) 1px 1px;
+    justify-content: space-between;
+}
+ .main-body {
+    font-size: 15px;
+ }
+/* Part 2.2.1: Service-left */
+.main-body .service_left{
+    
+    width: 250px;
+    height: 1000px;
+    border-radius: 5px;
+    background-color: rgb(250, 250, 240);
+}
+.main-body .service_left li{
+    color: #464444;
+    background-color: transparent;
+}
+.main-body .service_left li .iconify.ml-2.mr-5{
+    color: #464444;
+}
+.main-body .service_left li:hover .iconify.ml-2.mr-5{
+    color: #dc3545;
+}
+.main-body .service_left li:hover   {
+    background-color: #ffdce0;
+    color: #dc3545;
+}
