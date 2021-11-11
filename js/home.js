@@ -46,3 +46,10 @@ $(document).ready(function(){
       $("#listview-user").slideToggle('2000');
     });
   });
+
+// btns star
+$(document).ready(function(){
+    $("#icon_star").click(function(){
+        $("#icon_star").classList('iconify_star');
+    });
+  });
