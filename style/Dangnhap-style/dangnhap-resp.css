@@ -1,0 +1,294 @@
+*{
+    font-family: 'Varela Round', sans-serif;
+    margin: O auto;
+    
+}
+
+body{
+    background: #EBF2F5;
+}
+
+/* fixel header */
+#site-header{
+    top: 0;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+    transition: all .3s ease;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+}
+/* css for header hiding and showing */
+#site-header.hide{
+    top: -117px;
+}
+
+.img_logo_header{
+    width: 60%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.container_input span{
+    border-radius: 30px;
+}
+
+.container_input input{
+    border-radius: 30px;
+}
+/* button category */
+#listview-category {
+    display: none;
+}
+
+#listview-category .iconify.ml-2.mr-5{
+    color: #e94560;
+}
+#listview-category  li:hover .iconify.ml-2.mr-5{
+    color: #ffffff;
+}
+#listview-category  li:hover{
+    color: #ffffff;
+}
+#listview-category  li:hover{
+    background-color: #e6a7ad;
+    opacity: 1;
+}
+
+/* button for user */
+
+/* user btn */
+#btn-cart , #btn-user02{
+    width: 50px;
+    height: 50px;
+
+}
+.btn_cart , .btn_user{
+    background-color: #DF2F4C;
+}
+
+#listview-user{
+    display: none;
+}
+#listview-user{
+    position: relative;
+    margin-top: -20px;
+    right: -10%; 
+ 
+}
+#listview-user li{
+    border: none;
+    background: #fcd0d0;
+    color: #dc3545;
+}
+#listview-user li:hover{
+    background: #ffffff;
+    color: #dc3545;
+}
+
+@media only screen and (max-width: 767px) {
+    #listview-user{
+        position: relative;
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* menu header */
+.container_menu_header ul li{
+    list-style-type: none;
+}
+
+
+
+
+
+
+
+/* content */
+/* content left */
+.container .login{
+    /* height: 600px; */
+}
+.login-content{
+    top: 150px;
+    position: relative;
+}
+.login-content-item{
+    margin-top: 30px;
+    height: 600px;
+}
+.login-content-item-introduce{
+    margin-left: 100px;
+}
+.content-item-heading{
+    font-size: 30px;
+    color: #DF2F4C;
+}
+.img-introduce{
+    margin-top: 30px;
+    width:500px;
+    height: 230px;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* content right */
+.content-heading-login{
+    font-size: 30px;    
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #DF2F4C;
+    text-shadow: 5px 2px 4px #FF8B8B;
+    margin-bottom: 20px;
+}
+.form-control{
+    width: 80%;
+    border-radius: 50px;
+    padding-left: 40px;
+}
+.form-user, .form-pass{
+    position: relative;
+    padding: 5px 0;
+}
+
+.form-user{
+    margin-bottom: 20px;
+}
+.form-user i ,
+.form-pass i{
+    position: absolute;
+    left: 0;
+    top: 10px;
+    padding: 3px 15px;
+    color: #DF2F4C;
+    transition: .3s;
+}
+.form-control input:focus + i{
+    color: #DF2F4C;
+}
+
+.forgot-pass{
+    font-size: 12px;
+    color: #DF2F4C;
+}
+.forgot-pass:hover{
+    top: -10px;
+    text-decoration: none;
+    color: #DF2F4C;
+    opacity: 0.6;
+}
+.btn-login{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+.btn-login-item{
+    margin: 20px 0;
+    width: 50%;
+    padding: 3px 8px;
+}
+.sign-in{ 
+    color: #DF2F4C;
+}
+.sign-in:hover{
+    text-decoration: #DF2F4C;
+    color: #DF2F4C;
+    opacity: 0.6;
+}
+
+/* reponsive */
+@media (max-width : 1023px) {
+    .img-introduce{
+        object-fit: contain;
+    }
+    .login-content-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-user, .form-pass{
+        width: 100%;
+    }
+}
+
+
+
+
+/* Footer */
+.container-fluid.footer{
+    margin: auto;
+    background-color: #0F3460;
+}
+.row.row_footer{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+    /* display: flex;
+    justify-content: center; */
+}
+.frame{
+    height: 100%;
+    width: 80%;
+}
+.logo_footer{
+    width: 80%;
+    height: 180px;
+    
+}
+.text-uppercase{
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.text_reset{
+    font-family: 'Varela Round', sans-serif;
+    color: #AEB4BE !important;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer_icon{
+    height: 20px;
+    margin-bottom: 20px;
+}
+.footer_icon a, .footer_icon a:hover  {
+  text-decoration: none;
+}
+.footer_icon .iconify{
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    color: white !important;
+}
+.footer_icon .iconify:hover{
+    opacity: 0.6;
+}
+
+.contract, .aboutus, .image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .category-list-col{
+        margin : 7px 0;
+    }
+    .category-list-row{
+        margin-top: 0px;
+    }
+    .contract, .aboutus{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .image {
+        display: none;
+    }
+
+  }
