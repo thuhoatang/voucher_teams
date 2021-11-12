@@ -1,0 +1,17 @@
+.container-profile{
+    background-color: white;
+    margin: auto;
+    width: 90%;
+}
+
+.d-block {
+   border-radius: 10px;
+}
+
+
+
+/* silde */
+.carousel-indicators li{
+    width: 50px;
+    background-color: rgba(255, 255, 255, 0);
+}
