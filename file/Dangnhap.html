@@ -26,20 +26,20 @@
     <div class="container-fluid header bg-white" id="site-header">
         <div class="row">
             <div class="col container_logo_header d-flex">
-                <img class="img_logo_header my-3 d-none d-lg-block d-xl-block d-md-none" src="../image/logo_header.png" alt="">
-                <button  id="btn-category" type="button" class="btn btn-outline-danger px-3 py-0 my-3"><span class="iconify" data-icon="bi:list-ul" style="color: #e94560; font-size:20px;"></span></button>
+                <img class="img_logo_header my-3 d-none d-lg-block d-xl-block d-md-none" src="../image/landing/header/logo_header.png" alt="">
+                <button  id="btn-category" type="button" class="btn btn-outline-danger px-2 my-3 ml-2"><span class="iconify" data-icon="bi:list-ul" style="color: #e94560; font-size:20px;"></span></button>
             </div>
-            <div class="col-4 col-sm-4 col-xl-6 col-lg-6 col-sm-6">
+            <div class="search_bar col-4 col-md-6 col-xl-6 col-lg-6 col-sm-6">
                 <div class="container_input input-group my-3">
                     <div class="input-group-prepend">
                       <span class="btn input-group-text bg-white" id="basic-addon1"><span class="iconify" data-icon="bx:bx-search-alt-2" style="color: #615757;"></span></span>
                     </div>
                     <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
-                  </div>
+                </div>
                   
             </div>
             <div class="col d-flex">
-                <button onclick="openNav()"  id="btn-cart"   type="button" class="btn btn_cart rounded-circle d-none d-sm-block my-3 mx-4"><span class="iconify" data-icon="eva:shopping-cart-fill" style="color: white; font-size:20px;"></span>
+                <button onclick="openNav()"  id="btn-cart"   type="button" class="btn btn_cart rounded-circle my-3 mx-4"><span class="iconify" data-icon="eva:shopping-cart-fill" style="color: white; font-size:20px;"></span>
                 </button>
                 <button id="btn-user02" type="button" class="btn btn_user rounded-circle my-3 mx-4"><span class="iconify" data-icon="bx:bxs-user" style="color: white; font-size:20px;"></span></button>
                 
@@ -51,7 +51,7 @@
             <div class="col"></div>
             <div class="col-xl-7 col-lg-7 col-md-10 d-sm-none d-none d-md-block">
                 <ul class="d-flex">
-                    <li class="mx-5"><a class="text-dark" href="#">Home</a></li>
+                    <li class="mx-5"><a class="text-dark" href="file/home.html">Home</a></li>
                     <li class="mr-5"><a class="text-dark" href="#">Voucher</a></li>
                     <li class="mr-5"><a class="text-dark" href="#">Store</a></li>
                     <li class="mr-5"><a class="text-dark" href="#">About us</a></li>
@@ -69,37 +69,45 @@
                     <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="fa-solid:headphones" style="font-size: 25px;"></span>Technological</li>
                     <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="bx:bxs-baby-carriage" style="font-size: 25px;"></span>Baby</li>
         </ul>
-
+  
       
-      <ul class="container list-group border-0 w-100 border-0 col-md-3 offset-md-8 text-center" id="listview-user">
-        <li class="list-group-item  border-0">Log In</li>
-        <li class="list-group-item  border-0">Register</li>
-                
-      </ul>
+        <ul class="container list-group w-100 col-md-2 col-lg-2 col-sm-3 col-sx-3 col-5 text-center" id="listview-user">
+            <li class="list-group-item"><a href="file/Dangnhap.html" class="text-danger">Log In</a></li>
+            <li class="list-group-item"><a href="file/Dangnhap.html" class="text-danger">Register</a></li>           
+        </ul>
     
-    </div> 
+      </div>
     <!-- Part 2:  -->
     <div class="container login">
-        <div class="row login-content">
-            <div class="col-xl-7 col-lg-5 col-md-12 col-sm-12  login-content-item">
+        <div class="row login-content p-0 m-0">
+            <div class="col-xl-7 col-lg-6 col-md-4 col-sm-12  login-content-itemone ">
                 <div class="login-content-item-introduce">
                     <h3 class="content-item-heading">Hãy đến với chúng tôi</h3>
                     <p class="content-item-introduce">Quản lý shop một cách hiệu quả trên My Voucher</p>
                     <p class="content-item-introduce">Tăng năng suất bán hàng của cửa hàng bạn</p>
-                    <img src="../image/Login/nen.png" alt="nền" class = "img-introduce">
+                    <div class ="content-img-introduce" >
+                        <img src="../image/Login/nen.png" alt="nền" class = "img-introduce">
+                    </div>
                 </div>
             </div>
-            <div class="col-xl-5 col-lg-7 col-md-12 col-sm-12 login-content-item">
+            <div class="col-xl-5 col-lg-6 col-md-8 col-sm-12 login-content-itemtwo">
                 <h3 class="content-heading-login">Log in</h3>
                 <div class="form-user">
-                    <input type="text"  placeholder="Username" name="Username" required id="" class="form-control">
+                    <input type="text" placeholder="Username" name="Username" required id="" class="form-control">
                     <i class="fas fa-user"></i>
                 </div>
                 <div class="form-pass">
                     <input type="password"  placeholder="Password" name="Password" required id="" class="form-control">
                     <i class="fas fa-lock"></i>
                 </div>
-                <a href="" class="forgot-pass">Forgot password?</a>
+                <div class="forgot-remeber d-flex justify-content-between">
+                    <a href="" class="forgot-pass">Forgot password?</a>
+                    <label >
+                        <input type="checkbox" name="" >
+                        Remember me
+                    </label>
+                </div>
+                
                 <div class="btn-login">
                     <button class="btn btn-danger btn-login-item">LOGIN</button>
                 </div>
