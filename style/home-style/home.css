@@ -108,7 +108,7 @@ body{
 
 /* Part 2: Main */
 .main-home{
-    height: 5000px;
+    
     /* background-color: #e6a7ad; */
     position: relative;
     top: 120px;
@@ -148,7 +148,34 @@ body{
     background-color: #ffdce0;
     color: #dc3545;
 }
+/* css for checkbox */
+.service_left .checkbox input[type=checkbox]{
+   display: none;
 
+}
+.service_left .checkbox i{
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    border: 2px solid #dc3545;
+    border-radius: 2px;
+}
+
+/* hover checkbox */
+.service_left .checkbox:hover{
+    cursor: pointer;
+}
+
+.service_left .checkbox:hover i{
+    border-color: #dc3545;
+}
+
+.service_left .checkbox input[type="checkbox"]:checked + i{
+    background-color: #dc3545;
+}
+.service_left .checkbox i:checked i {
+    background-color: #dc3545;
+}
 /* Part 2.2.2: Card-product-right */ 
 .card_product_right{
     margin: 0 auto;
@@ -252,3 +279,85 @@ body{
 .middle .text_middle input:not(:checked) ~ label:hover{
   color: #E94560;
 }
+
+/*Pagination // phân trang button  */
+.container.pagination.d-flex{
+    justify-content: center;
+    margin-top: 23px;
+    font-size: 15px;
+}
+
+/* Footer */
+.container-fluid.footer{
+    margin: auto;
+    background-color: #0F3460;
+}
+.row.row_footer{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.frame{
+    height: 100%;
+    width: 80%;
+}
+.logo_footer{
+    width: 80%;
+    height: 180px;
+    
+}
+.text-uppercase{
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.text_reset{
+    font-family: 'Varela Round', sans-serif;
+    color: #AEB4BE !important;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer_icon{
+    height: 20px;
+    margin-bottom: 20px;
+}
+.footer_icon a, .footer_icon a:hover  {
+  text-decoration: none;
+}
+.footer_icon .iconify{
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    color: white !important;
+}
+.footer_icon .iconify:hover{
+    opacity: 0.6;
+}
+
+.contract, .aboutus, .image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .category-list-col{
+        margin : 7px 0;
+    }
+    .category-list-row{
+        margin-top: 0px;
+    }
+    .contract, .aboutus{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .image {
+        display: none;
+    }
+  }
