@@ -204,6 +204,14 @@ body{
 .service_left .checkbox i:checked i {
     background-color: #dc3545;
 }
+
+/* Part 2.2.1: Responsive Service-left */
+@media only screen and (max-width: 1024px){
+    .service_left{
+        display: none;
+    }
+}
+
 /* Part 2.2.2: Card-product-right */ 
 .card_product_right{
     margin: 0 auto;
@@ -314,6 +322,12 @@ body{
     margin-top: 23px;
     font-size: 15px;
 }
+/* responsive card_voucher */
+@media only screen and (max-width: 599px){
+    .card_product_right .child-1{
+        margin: 10px auto;
+    }
+}
 
 /* Footer */
 .container-fluid.footer{
@@ -389,3 +403,4 @@ body{
         display: none;
     }
   }
+
