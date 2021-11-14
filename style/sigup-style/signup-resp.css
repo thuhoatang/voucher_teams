@@ -191,39 +191,8 @@ body{
 
 .form-control{
     width: 100%;
-    border-radius: 3px;
+    border-radius: 20px;
 }
-
-/* .form-user{
-    margin-bottom: 20px;
-} */
-/* .form-user i ,
-.form-pass i{
-    position: absolute;
-    left: 0;
-    top: 10px;
-    padding: 3px 15px;
-    color: #DF2F4C;
-    transition: .3s;
-} */
-/* .form-control input:focus + i{
-    color: #DF2F4C;
-} */
-
-/* .forgot-pass{
-    font-size: 12px;
-    color: #DF2F4C;
-}
-.forgot-pass:hover{
-    top: -10px;
-    text-decoration: none;
-    color: #DF2F4C;
-    opacity: 0.6;
-}
-.forgot-remeber{
-    width: 80%;
-
-} */
 
 .btn-signin{
     width: 80%;
@@ -280,7 +249,7 @@ body{
     }
     .btn-signin-item{
         width: 100%;
-        padding: 3px;
+        padding: 5px;
     }
 }
 

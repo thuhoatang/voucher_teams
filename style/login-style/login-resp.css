@@ -286,9 +286,12 @@ body{
     .form-pass i{
         padding: 3px 16px;
     }
+    .btn-login{
+        width: 100%;
+    }
     .btn-login-item{
         width: 100%;
-        padding: 3px;
+        padding: 5px;
     }
 }
 
