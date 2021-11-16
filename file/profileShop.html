@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Boostrap -->
+     <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css">
+     <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+     <!-- link font-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="../style/profileShop-style/profileShop.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Profile Shop</title>
+</head>
+<body>
+    <!-- Part 1:  Header -->
+    <div class="container-fluid header bg-white" id="site-header">
+        <div class="row">
+            <div class="col container_logo_header d-flex">
+                <a href="../index.html" class="mx-0">
+                    <img class="img_logo_header  ml-4  my-3 d-none d-lg-block d-xl-block d-md-none" src="../image/landing/header/logo_header.png" alt="">
+                </a>
+                <button  id="btn-category" type="button" class="btn btn-outline-danger px-2 my-3 ml-2"><span class="iconify" data-icon="bi:list-ul" style="color: #e94560; font-size:20px;"></span></button>
+            </div>
+            <div class="search_bar col-4 col-md-6 col-xl-6 col-lg-6 col-sm-6">
+                <div class="container_input input-group my-3">
+                    <div class="input-group-prepend">
+                      <span class="btn input-group-text bg-white" id="basic-addon1"><span class="iconify" data-icon="bx:bx-search-alt-2" style="color: #615757;"></span></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                  
+            </div>
+            <div class="col d-flex">
+                <button onclick="openNav()"  id="btn-cart"   type="button" class="btn btn_cart rounded-circle my-3 mx-4"><span class="iconify" data-icon="eva:shopping-cart-fill" style="color: white; font-size:20px;"></span>
+                </button>
+                <button id="btn-user02" type="button" class="btn btn_user rounded-circle my-3 mx-4"><span class="iconify" data-icon="bx:bxs-user" style="color: white; font-size:20px;"></span></button>
+                
+            </div>
+                  
+            
+        </div>
+        <div class="row container_menu_header">
+            <div class="col"></div>
+            <div class="col-xl-7 col-lg-7 col-md-10 d-sm-none d-none d-md-block">
+                <ul class="d-flex">
+                    <li class="mx-5"><a class="text-dark" href="file/home.html">Home</a></li>
+                    <li class="mr-5"><a class="text-dark" href="#">Voucher</a></li>
+                    <li class="mr-5"><a class="text-dark" href="#">Store</a></li>
+                    <li class="mr-5"><a class="text-dark" href="#">About us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <ul class="list-group border-0 w-100 border-0 col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12" id="listview-category">
+            <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="akar-icons:shopping-bag" style="font-size: 25px;"></span>Fashion</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="dashicons:food" style="font-size: 25px;"></span>Food</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5"  data-icon="ion:fitness" style="font-size: 27px;"></span>Fitness</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="fa-solid:gifts" style="font-size: 23px;"></span>Gifts</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5"  data-icon="simple-icons:yourtraveldottv" style="font-size: 25px;"></span>Travel</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="clarity:car-solid" style="font-size: 25px;"></span>Bike</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="fa-solid:headphones" style="font-size: 25px;"></span>Technological</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="bx:bxs-baby-carriage" style="font-size: 25px;"></span>Baby</li>
+        </ul>
+  
+      
+        <ul class="container list-group w-100 col-md-2 col-lg-2 col-sm-3 col-sx-3 col-5 text-center" id="listview-user">
+            <li class="list-group-item"><a href="./login.html" class="text-danger">Log In</a></li>
+            <li class="list-group-item"><a href="./signup.html" class="text-danger">Register</a></li>           
+        </ul>
+    
+    </div>
+    <!-- part 2 : Profile shop -->
+    <div class="main mt-4 ">
+        <div class="container">
+            <div class="row profile-shop ">
+                <div class="col-lg-12 profile-shop-col ">
+                    <div class="img-cover">
+                        <img src="../image/profile-shop/cover.jpg" alt="Anh bia">
+                    </div>
+                    <div class="info-store">
+                        <div  class="d-flex">
+                            <div class="img-avatar">
+                                <img src="../image/profile-shop/avt.jpg" alt="Anh dai dien">
+                            </div>
+                            <div class="deltail_infor">
+                                <a href=""><h6 class="store_name ">
+                                    Thu Thủy Store</h6></a>
+                                <div class="d-flex mb-3 mt-3">
+                                    <span class="iconify" data-icon="emojione:star"></span>
+                                    <span class="iconify" data-icon="emojione:star"></span>
+                                    <span class="iconify" data-icon="emojione:star"></span>
+                                    <span class="iconify" data-icon="emojione:star"></span>
+                                    <span class="iconify" data-icon="emojione:star"></span>
+                                </div>
+                                <span class="d-block">
+                                    <span class="iconify mr-2" data-icon="carbon:location-heart-filled" style="color: #df2f4c;">
+                                    </span>48 Cao Thắng
+                                </span>
+                                <span>
+                                    <span class="iconify mr-2" data-icon="bx:bxs-phone" style="color: #df2f4c;">
+                                    </span>0988406374
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="Contact-store">
+                            <button type="button" class="btn btn-outline-danger">Contact store</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Part 2.1: Search filter -->
+    <div class="main-home container">
+        <!-- Part 2.1: Search filter -->
+        <div class="container search_filter d-flex">
+            <div class="title d-none d-sm-block">
+                <strong>Searching for “voucher fashion”</strong>
+                <p class="m-0">30 result</p>
+            </div>
+            <nav class="navbar navbar-danger bg-light">
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+        <!-- Part 2.2: Service-left and card-product-right -->
+        <div class="container main-body d-flex px-0 mt-1">
+
+            <!-- Part 2.2.1: Service-left -->
+            <div class="service_left">
+                <!-- item-1: list service -->
+                <div class="list_service">
+                    <p class="text-danger ml-4 mt-3"><strong>Service</strong></p>
+                    <ul class="list-group border-0 w-100 border-0 bg-transparent" id="">
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5" data-icon="akar-icons:shopping-bag" style="font-size: 15px;"></span>Fashion</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5" data-icon="dashicons:food" style="font-size: 15px;"></span>Food</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5"  data-icon="ion:fitness" style="font-size: 15px;"></span>Fitness</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5" data-icon="bi:gift-fill" style="font-size: 14px;"></span>Gifts</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5"  data-icon="simple-icons:yourtraveldottv" style="font-size: 15px;"></span>Travel</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5" data-icon="clarity:car-solid" style="font-size: 17px;"></span>Bike</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5" data-icon="fa-solid:headphones" style="font-size: 15px;"></span>Technological</li>
+                        <li class="list-group-item py-2 border-0"><span class="iconify ml-2 mr-5" data-icon="bx:bxs-baby-carriage" style="font-size: 15px;"></span>Baby</li>
+                    </ul>
+                </div>
+                
+                <!-- item-2: Price range -->
+                <div class="price_range">
+                    <p class="text-danger ml-4 mt-3"><strong>Price range</strong></p>
+                    <div class="form-group d-flex ml-1">
+                        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="0" style="width: 100px;">
+                        <p class="mt-2 mx-3">&ndash;</p>
+                        <input type="number" class="form-control" id="formGroupExampleInput" placeholder="1000" style="width: 100px;">
+                    </div>
+                </div>
+                
+                <!-- item-3: Salesroom -->
+                <div class="salesroom">
+                    <p class="text-danger ml-4 my-3"><strong>Salesroom</strong></p>
+                    <label class="checkbox mx-4 mb-3">
+                        <input class="mr-3 text-danger" type="checkbox" id="checkbox_address_HaNoi" name="scales" style="background: #e94560;">
+                        <i class="mr-3 icon-checkbox"></i>Hà Nội
+                        <!-- <label class="state p-dange" for="checkbox_address_HaNoi">Hà Nội</label> -->
+                    </label>
+                      
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_address_DaNang" name="horns">
+                        <i class="mr-3 icon-checkbox"></i>Đà Nẵng
+                    </label>
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_address_HoChiMinh" name="horns">
+                        <i class="mr-3 icon-checkbox"></i>Cần Thơ
+                    </label>
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_address_CanTho" name="horns">
+                        <i class="mr-3 icon-checkbox"></i>Hồ Chí Minh
+                    </label>
+                </div>
+                
+                <!-- item-4: Ratings -->
+                <div class="rating">
+                    <p class="text-danger ml-4 my-3"><strong>Ratings</strong></p>
+                    <label class="checkbox mx-4 mb-3">
+                        <input  class="mr-3"  type="checkbox" id="checkbox_rating_01" name="scales"
+                               checked>
+                               <i class="mr-2 icon-checkbox"></i>
+                        
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                        
+                    </label>
+                      
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_rating_02" name="horns">
+                        <i class="mr-2 icon-checkbox"></i>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                    </label>
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_rating_03" name="horns">
+                        <i class="mr-2 icon-checkbox"></i>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+    
+                    </label>
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_rating_04" name="horns">
+                        <i class="mr-2 icon-checkbox"></i>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #c0c0c0; font-size: 20px;"></span>
+    
+                        
+                    </label>
+                    <label  class="checkbox mx-4 mb-3">
+                        <input class="mr-3" type="checkbox" id="checkbox_rating_05" name="horns">
+                        <i class="mr-2 icon-checkbox"></i>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+                            <span class="iconify" data-icon="ant-design:star-filled" style="color: #fb0; font-size: 20px;"></span>
+    
+                        
+                    </label>
+                </div>     
+            </div>
+
+            <!-- Part 2.2.2: Card-product-right -->
+            <div class="card_product_right">
+                <div class="row">
+                    <div class="child-1 col-12 col-md col-sm col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_06.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-1 col-12 col-md col-sm col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_08.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-1 col-12 d-none d-md-none d-sm-none  d-lg-block col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_10.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="child-1 col-12 col-md col-sm col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_01.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-1 col-12 col-md col-sm col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_06.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-1 col-12 d-none d-md-none d-sm-none  d-lg-block col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_07.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="child-1 col-12 col-md col-sm col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_09.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-1 col-12 col-md col-sm col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_03.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="child-1  col-12 d-none d-md-none d-sm-none  d-lg-block col-lg col-xl">
+                        <div class="card">
+                            <img class="card-img-top px-2" src="../image/home/card/img_card_04.png" alt="Card image cap">
+                            <div class="middle">
+                              <div class="text_middle d-flex">
+                                <input class="icon_heart mx-1 mt-2" type="radio" name="icon_heart" id="icon_heart">
+                                <label for="icon_heart" class="icon_hover fa-2x fas fa-heart mr-4"></label>
+                
+                                <input class="icon_cart mx-1 mt-2" type="radio" name="icon_cart" id="icon_cart">
+                                <label for="icon_cart" class="icon_hover fa-2x fas fa-cart-arrow-down"></label>
+                
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title"><b>Skin care voucher at Hoa Beauty</b></h6>
+                              <a href="#" class="card-text">Thu Hoa Store</a>
+                                <div class="star-widget d-flex">
+                                  <div class="d-flex" style="flex-flow: row-reverse; justify-content: flex-start">
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-1">
+                                    <label for="rate-1" class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-2">
+                                    <label for="rate-2"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-3">
+                                    <label for="rate-3"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-4">
+                                    <label for="rate-4"  class="fas fa-star mr-2 mt-1"></label>
+                                    <input class="mx-1 mt-2" type="radio" name="rate" id="rate-5">
+                                    <label for="rate-5"  class="fas fa-star mr-2 mt-1"></label>
+                                  </div>
+                                </div>
+                                <p class="discount_title text-danger"><b>500000 đ</b></p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination // phân trang button -->
+                <div class="container pagination  d-flex">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link  text-danger" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link  text-danger" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link  text-danger" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link  text-danger" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link  text-danger" href="#">4</a></li>
+                      <li class="page-item"><a class="page-link  text-danger" href="#">5</a></li>
+                      <li class="page-item"><a class="page-link  text-danger" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Part 2.3: Footer -->
+    <div class="container-fluid footer mt-5">
+        <div class="row row_footer">
+            <div class="col-lg-4 col-md-4 col-sm-12 image">
+                <div class="frame">
+                    <img class="logo_footer" src="../image/landing/footer/logo-footer.png" alt="logo-footer">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 contract">
+                <div class="frame">
+                    <h6 class="text-uppercase fw-bold">
+                        Contact Us
+                    </h6>
+                    <p>
+                    <a href="#!" class="text_reset">36 Ong Ich Khiem,Da nang,  VietNam</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Email: yourvoucher.help@gmail.com</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Phone: +84 905 589 210 </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 aboutus">
+                <div class="frame">
+                    <h6 class="text-uppercase fw-bold">
+                        About us
+                    </h6>
+                    <p>
+                    <a href="#!" class="text_reset">Our store</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Your voucher</a>
+                    </p>
+                    <div class="footer_icon">
+                        <a href="">
+                            <span class="iconify " data-icon="bx:bxl-facebook-circle"  ></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="ant-design:twitter-circle-filled" data-width="24" data-height="24"></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="akar-icons:instagram-fill" data-width="24" data-height="24"></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="akar-icons:google-contained-fill" data-width="24" data-height="24"></span>
+                            </span>
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+</body>
+</html>
