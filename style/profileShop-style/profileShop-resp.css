@@ -195,6 +195,11 @@ body{
 
 
 
+
+
+
+
+
 /* Part 2: Main */
 .main-home{
     /* background-color: #e6a7ad; */
@@ -204,7 +209,7 @@ body{
 /* Part 2.1: Search filter */
 .main-home .search_filter {
     font-size: 13px;
-    background-color: rgb(250, 250, 240);
+    background-color:#ffffff;
     border-radius: 5px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -220,7 +225,7 @@ body{
     width: 250px;
     height: 1100px;
     border-radius: 5px;
-    background-color: rgb(250, 250, 240);
+    background-color: #ffffff;
 }
 .main-body .service_left li{
     color: #464444;
@@ -303,8 +308,12 @@ body{
 .card_product_right .card-body a{
     position: relative;
     top: -10px;
+    color: #DF2F4C;
 }
-
+.card_product_right .card-body a:hover{
+    opacity: 0.8;
+    text-decoration: none ;
+}
 .card_product_right .card-body .star-widget{
     position: relative;
     top: -5px;
@@ -388,6 +397,13 @@ body{
         margin: 10px auto;
     }
 }
+
+
+
+
+
+
+
 /* Footer */
 .container-fluid.footer{
     margin: auto;
