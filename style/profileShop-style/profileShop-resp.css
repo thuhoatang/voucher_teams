@@ -247,11 +247,12 @@ body{
 
 }
 .service_left .checkbox i{
-    height: 14px;
-    width: 14px;
+    height: 18px;
+    width: 18px;
     display: inline-block;
     border: 2px solid #dc3545;
     border-radius: 2px;
+    position: relative;
 }
 
 /* hover checkbox */
@@ -263,8 +264,15 @@ body{
     border-color: #dc3545;
 }
 
-.service_left .checkbox input[type="checkbox"]:checked + i{
-    background-color: #dc3545;
+.service_left .checkbox input[type="checkbox"]:checked + i::after{
+    content: "";
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
+    background: #dc3545;
+   top: 2.2px;
+   left: 2px;
+   border-radius: 2px 2px;
 }
 .service_left .checkbox i:checked i {
     background-color: #dc3545;
