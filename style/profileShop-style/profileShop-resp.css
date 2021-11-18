@@ -309,11 +309,12 @@ body{
 
 }
 .service_left .checkbox i{
-    height: 14px;
-    width: 14px;
+    height: 18px;
+    width: 18px;
     display: inline-block;
     border: 2px solid #dc3545;
     border-radius: 2px;
+    position: relative;
 }
 
 /* hover checkbox */

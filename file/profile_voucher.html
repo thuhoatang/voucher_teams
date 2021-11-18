@@ -27,16 +27,20 @@
 </head>
 
 <body>
+
     <!-- Part 1:  Header -->
     <div class="container-fluid header bg-white" id="site-header">
         <div class="row">
             <div class="col container_logo_header d-flex">
-                <img class="img_logo_header my-3 d-none d-lg-block d-xl-block d-md-none" src="../image/logo_header.png"
-                    alt="">
+                <a href="../index.html" class="mx-0">
+                    <img class="img_logo_header  ml-4  my-3 d-none d-lg-block d-xl-block d-md-none"
+                        src="../image/logo_header.png" alt="">
+                </a>
+
                 <button id="btn-category" type="button" class="btn btn-outline-danger px-2 my-3 ml-2"><span
                         class="iconify" data-icon="bi:list-ul" style="color: #e94560; font-size:20px;"></span></button>
             </div>
-            <div class="search_bar col-4 col-sm-4 col-xl-6 col-lg-6 col-sm-6">
+            <div class="search_bar col-4 col-md-6 col-xl-6 col-lg-6 col-sm-6">
                 <div class="container_input input-group my-3">
                     <div class="input-group-prepend">
                         <span class="btn input-group-text bg-white" id="basic-addon1"><span class="iconify"
@@ -49,7 +53,7 @@
             </div>
             <div class="col d-flex">
                 <button onclick="openNav()" id="btn-cart" type="button"
-                    class="btn btn_cart rounded-circle d-none d-sm-block my-3 mx-4"><span class="iconify"
+                    class="btn btn_cart rounded-circle my-3 mx-4"><span class="iconify"
                         data-icon="eva:shopping-cart-fill" style="color: white; font-size:20px;"></span>
                 </button>
                 <button id="btn-user02" type="button" class="btn btn_user rounded-circle my-3 mx-4"><span
@@ -63,7 +67,7 @@
             <div class="col"></div>
             <div class="col-xl-7 col-lg-7 col-md-10 d-sm-none d-none d-md-block">
                 <ul class="d-flex">
-                    <li class="mx-5"><a class="text-dark" href="#">Home</a></li>
+                    <li class="mx-5"><a class="text-dark" href="file/home.html">Home</a></li>
                     <li class="mr-5"><a class="text-dark" href="#">Voucher</a></li>
                     <li class="mr-5"><a class="text-dark" href="#">Store</a></li>
                     <li class="mr-5"><a class="text-dark" href="#">About us</a></li>
@@ -92,129 +96,440 @@
         </ul>
 
 
-        <ul class="container list-group border-0 w-100 border-0 col-md-3 offset-md-8 text-center" id="listview-user">
-            <li class="list-group-item  border-0">Log In</li>
-            <li class="list-group-item  border-0">Register</li>
-
+        <ul class="container list-group w-100 col-md-2 col-lg-2 col-sm-3 col-sx-3 col-5 text-center" id="listview-user">
+            <li class="list-group-item"><a href="file/login.html" class="text-danger">Log In</a></li>
+            <li class="list-group-item"><a href="file/signup.html" class="text-danger">Register</a></li>
         </ul>
 
     </div>
     <!-- Part 2: Main -->
-    <div class="main-home" style="width: 100%;">
-        <!-- Part 2.1: Search filter -->
-        <div class="container-profile" style="background-color: hsla(350, 26%, 50%, 0);">
-            <label for="thuhoa" class="text-danger" style="font-weight:400;">Home/Voucher</label>
+    <div class="container main-home" style="width: 100%;">
+        <!-- Part 2.1: Title  -->
+        <div class="profile-voucher path">
+            <label for="thuhoa" style="font-weight:400;">Home/Voucher</label>
             <label for="">Detail</label>
         </div>
-        <!-- Part 2.2: Service-left and card-product-right -->
-        <div class="container-profile" style="">
+        <!-- Part 2.2: product detail-->
+        <div class="profile-voucher">
+            <!-- 2.2.1 SLIDE AND SHORT DESCRIPTION -->
             <div class="row">
-                <div class="slide-left col-md-6">
+                <div class="slide-left col-xl-6 col-md-12" style="padding: 30px;background-color: white;height:450">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                       
+
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="../image/landing/card/img_card_01.png" class="d-block w-100" alt="..."
-                                  style="height: 336px; object-fit: cover;">
+                                <img src="../image/detail-voucher/detail-voucher.png" class="d-block w-100" alt="..."
+                                    style="height: 336px; object-fit: cover;">
                                 <div class="carousel-caption d-none d-md-block text-left text-light">
-                
+
                                 </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../image/landing/card/img_card_01.png" class="d-block w-100" alt="..."
-                                  style="height:  336px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../image/detail-voucher/detail-voucher.png" class="d-block w-100" alt="..."
+                                    style="height:  336px; object-fit: cover;">
                                 <div class="carousel-caption d-none d-md-block text-left text-light">
-                
+
                                 </div>
-                              </div>
-                              <div class="carousel-item">
-                                <img src="../image/landing/card/img_card_01.png" class="d-block w-100" alt="..."
-                                  style="height: 336px; object-fit: cover;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../image/detail-voucher/detail-voucher.png" class="d-block w-100" alt="..."
+                                    style="height: 336px; object-fit: cover;">
                                 <div class="carousel-caption d-none d-md-block text-left text-light">
-                
+
                                 </div>
-                              </div>
+                            </div>
                         </div>
-                        <div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <ol class="carousel-indicators" style="background-color: #e94560;margin-bottom: -30px; height: 60px;">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">  <img src="../image/landing/card/img_card_01.png" class="d-block w-100" alt="..."
-                                style="height: auto; object-fit: cover;"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"> <img src="../image/landing/card/img_card_01.png" class="d-block w-100" alt="..."
-                                style="height: auto; object-fit: cover;"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"> <img src="../image/landing/card/img_card_01.png" class="d-block w-100" alt="..."
-                                style="height: auto; object-fit: cover;"></li>
+                        <hr>
+                        <ol class="carousel-indicators" style="margin-bottom: -60px; height: 60px;">
+                            <li style="width: 90px;" data-target="#carouselExampleIndicators" data-slide-to="0"
+                                class="active"> <img src="../image/detail-voucher/detail-voucher.png"
+                                    class="d-block w-100" alt="..." style="width: auto; object-fit: cover;"></li>
+                            <li style="width: 90px;" data-target="#carouselExampleIndicators" data-slide-to="1"> <img
+                                    src="../image/detail-voucher/detail-voucher.png" class="d-block w-100" alt="..."
+                                    style="width: auto; object-fit: cover;"></li>
+                            <li style="width: 90px;" data-target="#carouselExampleIndicators" data-slide-to="2"> <img
+                                    src="../image/detail-voucher/detail-voucher.png" class="d-block w-100" alt="..."
+                                    style="width: auto; object-fit: cover;"></li>
                         </ol>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+                        <div style="margin-top: 80px;">
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
                         </div>
-                       
+
                     </div>
                 </div>
-                <div class="des col-md-6">asd</div>
+                <div class="short-description des col-md-6">
+                    <label for=""><b class="fs-20" id="title-voucher" style="font-weight: bold;">80% off all
+                            products</b></label>
+                    <br>
+                    <label class="fs-20 color-gray" style="margin-top: 30px; " for=" ">Store : </label>
+                    <label id="store_name" for=" ">
+                        Dai Hoa
+                        Shop</label> <br>
+                    <label id="unit_price" for=" ">200.000đ </label><br>
+                    <label class="fs-18 " style=" display: inline-block" for=" ">Rated : </label>
+                    <div id="list-star-rated">
+                        <b id="stars">
+                            <span class="iconify" data-icon="akar-icons:star" data-width="20" data-height="20"></span>
+                            <span class="iconify" data-icon="akar-icons:star" data-width="20" data-height="20"></span>
+                            <span class="iconify" data-icon="akar-icons:star" data-width="20" data-height="20"></span>
+                            <span class="iconify" data-icon="akar-icons:star" data-width="20" data-height="20"></span>
+                            <span class="iconify" data-icon="akar-icons:star" data-width="20" data-height="20"></span>
+                        </b>
+                    </div>
+                    <br>
+                    <div id="select-quantity ">
+                        <button type="button " class="btn btn-light " disabled
+                            style="border-radius: 0px;border: 1px solid #C4C4C4;width: 35px;text-align: center;padding-top:3px;padding-bottom: 4px; ">-</button>
+
+                        <label for=" "
+                            style="margin-left: -5px;margin-top: 5px; background-color: #fff;border: 1px solid #C4C4C4;width: 52px;text-align: center;padding-top:3px;padding-bottom: 3.5px; ">1</label>
+                        <button type="button " class="btn btn-light "
+                            style="margin-left: -5px;border-radius: 0px;border: 1px solid #C4C4C4;width: 35px;text-align: center;padding-top:3px;padding-bottom: 4px; ">+</button>
+
+                        <label id="emaining_amount" for=" ">There are 73 products left</label>
+
+
+
+
+
+
+
+                    </div>
+
+                    <label class="fs-20 " style="width: 100px; margin-top:20px;color:#DF2F4C " for=" ">Start time
+                    </label><label id="start_day" class="date-time" style="" for=" ">01/10/2021</label><label
+                        id="start_time-day" class="date-time" for=" ">06:00
+                        AM</label> <br>
+                    <label class="fs-20 " style="width: 100px;margin-top: 17px;color:#DF2F4C " for=" ">End time
+                    </label><label id="end_day" class="date_time" for=" ">01/10/2021</label><label id="end_time_day "
+                        class="date-time" for=" ">06:00
+                        AM</label> <br>
+                    <button id="button_add_cart" type="button " class="btn  button_of_this_page ">Add
+                        To
+                        Card</button>
+
+                </div>
+
+            </div>
+
+            <!-- 2.2.2 Description -->
+            <div class="row ">
+                <div id="description" style="width: 100%;">
+                    <label id="" class="mg_top_50 color-gray fs-24 text_bold" for=" " ">Mô
+                        tả
+                    </label>
+
+                    <div id=" detail-description " style=" margin-top:20px;border: #DF2F4C 1px solid;width:
+                        100%;padding:10px;background-color: white;border-radius: 4px; ">
+                        <label for=" " style=" font-size: 24px;color: #DF2F4C;font-weight: bold; ">Gratitude to customers on the occasion of October 20</label>
+                        <div id=" detail " style=" padding-left: 50px;padding-right: 50px;width: 100%;display: block; ">
+                            <label for=" " style=" font-size:20px;font-weight:bold ">USER MANUAL</label>
+                            <p style=" size: 18px; ">Customers order and pay for E-Vouchers online (Zalopay, Visa, ATM, ...); Tiki sends E-Code to customers to use services at Apra Law; After receiving the E-code, customers will link with Apra Law Company in time
+                                administration to schedule a consultation appointment [Note: Customers contact to schedule an appointment at least 02 (two) days before using the service]; Customers will choose to consult directly at Apra Law Firm's office or through </p>
+                            <label for=" " style=" font-size:20px;font-weight:bold ">CONDITIONS OF USE</label>
+                            <p style=" size: 18px; ">The usage cycle starts from the first day to the 360th day customers use the service;</p>
+
+                            <div style=" width: 211px;height: 50px;margin: auto; ">  
+                                <button class=" btn button_of_this_page" style="width: 211px;height: 49px;" id="">See
+                                more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Part 2.3: Footer -->
-        <div class="container-fluid footer mt-5">
-            <div class="row row_footer">
-                <div class="col-lg-4 col-md-4 col-sm-12 image">
-                    <div class="frame">
-                        <img class="logo_footer" src="../image/landing/footer/logo-footer.png" alt="logo-footer">
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 contract">
-                    <div class="frame">
-                        <h6 class="text-uppercase fw-bold">
-                            Contact Us
-                        </h6>
-                        <p>
-                            <a href="#!" class="text_reset">36 Ong Ich Khiem,Da nang, VietNam</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text_reset">Email: yourvoucher.help@gmail.com</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text_reset">Phone: +84 905 589 210 </a>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12 aboutus">
-                    <div class="frame">
-                        <h6 class="text-uppercase fw-bold">
-                            About us
-                        </h6>
-                        <p>
-                            <a href="#!" class="text_reset">Our store</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text_reset">Your voucher</a>
-                        </p>
-                        <div class="footer_icon">
-                            <a href="">
-                                <span class="iconify " data-icon="bx:bxl-facebook-circle"></span>
-                            </a>
-                            <a href="">
-                                <span class="iconify" data-icon="ant-design:twitter-circle-filled" data-width="24"
-                                    data-height="24"></span>
-                            </a>
-                            <a href="">
-                                <span class="iconify" data-icon="akar-icons:instagram-fill" data-width="24"
-                                    data-height="24"></span>
-                            </a>
-                            <a href="">
-                                <span class="iconify" data-icon="akar-icons:google-contained-fill" data-width="24"
-                                    data-height="24"></span>
-                                </span>
-                            </a>
+        <!--2.3:  RATING -->
+        <div class="row " style=" margin-top: 30px; ">
+            <div style=" width: 100%; padding:10px;background-color: white;border-radius: 4px; ">
+                <label for=" " style=" font-size: 24px;font-weight: bold; ">Product Reviews</label>
+
+                <div style=" width: 92%;background-color: #FBF3EE;border-radius: 10px ;border: #DF2F4C 1px solid; margin:
+                            auto;margin-top: 20px; ">
+                    <div class=" col-left " style=" margin: 30px;width: 200px;text-align:center;display: inline-block ">
+                        <label for=" " style=" width: 100%;font-size:34px;color: #DF2F4C;display: inline; ">5 out of
+                            5</label>
+
+                        <div id=" list-star-rated " style=" display: inline-block;margin: auto; ">
+                            <b style=" color: #FFCD4E;font-size: 24px; ">
+                                <span class=" iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                </label>
+                            </b>
                         </div>
+                    </div>
+                    <div class=" col-left " style=" display: inline-block;width: auto; ">
+
+                        <button type=" button " class=" btn " style=" color: #DF2F4C;background-color: white; width: 123px;height: 52px;font-size:
+                            21px;margin-top: -40px; ">
+                            5 star</button>
+                        <button type=" button " class=" btn " style=" color: #DF2F4C;background-color: white; width: 123px;height: 52px;font-size:
+                            21px;margin-top: -40px; ">
+                            4 star</button>
+                        <button type=" button " class=" btn " style=" color: #DF2F4C;background-color: white; width: 123px;height: 52px;font-size:
+                            21px;margin-top: -40px; ">
+                            3 star</button>
+                        <button type=" button " class=" btn " style=" color: #DF2F4C;background-color: white; width: 123px;height: 52px;font-size:
+                            21px;margin-top: -40px; ">
+                            2 star</button>
+                        <button type=" button " class=" btn " style=" color: #DF2F4C;background-color: white; width: 123px;height: 52px;font-size:
+                            21px;margin-top: -40px; ">
+                            1 star</button>
+
+
+
+                    </div>
+                </div>
+                <!-- COMMENT -->
+                <div id=" comment " style=" width: 100%; ">
+                    <div style=" width: 92%;margin: auto; ">
+                        <div class=" item-comment " style=" margin-top:25px ">
+                            <div id=" user-name " style=" height: 30px;display: inline-block ">
+                                <div class=" rounded-circle "
+                                    style=" width: 30px;height: 30px;overflow: hidden;display: inline-block; ">
+                                
+                                    <img class=" " style=" width: 30px; "
+                                        src="
+                            https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/253820876_2683673498593359_7965052091545304256_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RBJRTMN0fNwAX-gXdaV&tn=_hwzGROOIBNPS-pg&_nc_ht=scontent.fdad3-5.fna&oh=6c81f84cb19f0e9a98ac2b7db23a4874&oe=619639DA "
+                                        alt=" ">
+
+                                </div>
+                                <div style=" margin-left: 10px ;display: inline-block;height: 30px;width: 100px; position:
+                            relative; ">
+                                    <label style=" margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%);
+                            transform: translateY(-50%); " for=" ">Huy Phú</label>
+
+                                </div>
+                            </div>
+                            <div style=" margin-left: 40px; ">
+                                <label for=" " style=" color: #FFCD4E "> <span class="iconify" data-icon="bx:bxs-star"
+                                        data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                </label><br>
+
+                                <div>
+                                    <label for=" ">Amazing good job</label>
+
+                                </div>
+
+                                <label style=" margin-top: 25px; " for=" ">21/10/2021</label>
+                            </div>
+                        </div>
+                        <div class=" item-comment " style=" margin-top:25px ">
+                            <div id=" user-name " style=" height: 30px;display: inline-block ">
+                                <div class=" rounded-circle "
+                                    style=" width: 30px;height: 30px;overflow: hidden;display: inline-block; ">
+                                    
+                                    <img class=" " style=" width: 30px; "
+                                        src=" https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/253820876_2683673498593359_7965052091545304256_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RBJRTMN0fNwAX-gXdaV&tn=_hwzGROOIBNPS-pg&_nc_ht=scontent.fdad3-5.fna&oh=6c81f84cb19f0e9a98ac2b7db23a4874&oe=619639DA "
+                                        alt=" ">
+
+                                </div>
+                                <div
+                                    style=" margin-left: 10px ;display: inline-block;height: 30px;width: 100px; position: relative; ">
+                                    <label
+                                        style=" margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); "
+                                        for=" ">Huy Phú</label>
+
+                                </div>
+                            </div>
+                            <div style=" margin-left: 40px; ">
+                                <label for=" " style=" color: #FFCD4E "> <span class="iconify" data-icon="bx:bxs-star"
+                                        data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                </label><br>
+
+                                <div>
+                                    <label for=" ">Amazing good job</label>
+
+                                </div>
+
+                                <label style=" margin-top: 25px; " for=" ">21/10/2021</label>
+                            </div>
+                        </div>
+                        <div class=" item-comment " style=" margin-top:25px ">
+                            <div id=" user-name " style=" height: 30px;display: inline-block ">
+                                <div class=" rounded-circle "
+                                    style=" width: 30px;height: 30px;overflow: hidden;display: inline-block; ">
+                                
+                                    <img class=" " style=" width: 30px; "
+                                        src=" https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/253820876_2683673498593359_7965052091545304256_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RBJRTMN0fNwAX-gXdaV&tn=_hwzGROOIBNPS-pg&_nc_ht=scontent.fdad3-5.fna&oh=6c81f84cb19f0e9a98ac2b7db23a4874&oe=619639DA "
+                                        alt=" ">
+
+                                </div>
+                                <div
+                                    style=" margin-left: 10px ;display: inline-block;height: 30px;width: 100px; position: relative; ">
+                                    <label
+                                        style=" margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); "
+                                        for=" ">Huy Phú</label>
+                                </div>
+                            </div>
+                            <div style=" margin-left: 40px; ">
+                                <label for=" " style=" color: #FFCD4E "><span class="iconify" data-icon="bx:bxs-star"
+                                        data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                </label><br>
+
+                                <div>
+                                    <label for=" ">Amazing good job</label>
+
+                                </div>
+
+                                <label style=" margin-top: 25px; " for=" ">21/10/2021</label>
+                            </div>
+                        </div>
+                        <div class=" item-comment " style=" margin-top:25px ">
+                            <div id=" user-name " style=" height: 30px;display: inline-block ">
+                                <div class=" rounded-circle "
+                                    style=" width: 30px;height: 30px;overflow: hidden;display: inline-block; ">
+                                    
+                                    <img class=" " style=" width: 30px; "
+                                        src=" https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/253820876_2683673498593359_7965052091545304256_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RBJRTMN0fNwAX-gXdaV&tn=_hwzGROOIBNPS-pg&_nc_ht=scontent.fdad3-5.fna&oh=6c81f84cb19f0e9a98ac2b7db23a4874&oe=619639DA "
+                                        alt=" ">
+
+                                </div>
+                                <div
+                                    style=" margin-left: 10px ;display: inline-block;height: 30px;width: 100px; position: relative; ">
+                                    <label
+                                        style=" margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); "
+                                        for=" ">Huy Phú</label>
+
+                                </div>
+                            </div>
+                            <div style=" margin-left: 40px; ">
+                                <label for=" " style=" color: #FFCD4E "> <span class="iconify" data-icon="bx:bxs-star"
+                                        data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                </label><br>
+
+                                <div>
+                                    <label for=" ">Amazing good job</label>
+
+                                </div>
+
+                                <label style=" margin-top: 25px; " for=" ">21/10/2021</label>
+                            </div>
+                        </div>
+                        <div class=" item-comment " style=" margin-top:25px ">
+                            <div id=" user-name " style=" height: 30px;display: inline-block ">
+                                <div class=" rounded-circle "
+                                    style=" width: 30px;height: 30px;overflow: hidden;display: inline-block; ">
+                                    
+                                    <img class=" " style=" width: 30px; "
+                                        src=" https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/253820876_2683673498593359_7965052091545304256_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=RBJRTMN0fNwAX-gXdaV&tn=_hwzGROOIBNPS-pg&_nc_ht=scontent.fdad3-5.fna&oh=6c81f84cb19f0e9a98ac2b7db23a4874&oe=619639DA "
+                                        alt=" ">
+                                </div>
+                                <div
+                                    style=" margin-left: 10px ;display: inline-block;height: 30px;width: 100px; position: relative; ">
+                                    <label
+                                        style=" margin: 0; position: absolute; top: 50%; -ms-transform: translateY(-50%); transform: translateY(-50%); "
+                                        for=" ">Huy Phú</label>
+
+
+                                </div>
+                            </div>
+                            <div style=" margin-left: 40px; ">
+                                <label for=" " style=" color: #FFCD4E "><span class="iconify" data-icon="bx:bxs-star"
+                                        data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                    <span class="iconify" data-icon="bx:bxs-star" data-width="20" data-height="20"></span>
+                                </label><br>
+
+                                <div>
+                                    <label for=" ">Amazing good job</label>
+
+                                </div>
+
+                                <label style=" margin-top: 25px; " for=" ">21/10/2021</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <!-- Part 2.3: Footer -->
+    <div class="container-fluid footer mt-5">
+        <div class="row row_footer">
+            <div class="col-lg-4 col-md-4 col-sm-12 image">
+                <div class="frame">
+                    <img class="logo_footer" src="../image/landing/footer/logo-footer.png" alt="logo-footer">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 contract">
+                <div class="frame">
+                    <h6 class="text-uppercase fw-bold">
+                        Contact Us
+                    </h6>
+                    <p>
+                    <a href="#!" class="text_reset">36 Ong Ich Khiem,Da nang,  VietNam</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Email: yourvoucher.help@gmail.com</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Phone: +84 905 589 210 </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 aboutus">
+                <div class="frame">
+                    <h6 class="text-uppercase fw-bold">
+                        About us
+                    </h6>
+                    <p>
+                    <a href="#!" class="text_reset">Our store</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Your voucher</a>
+                    </p>
+                    <div class="footer_icon">
+                        <a href="">
+                            <span class="iconify " data-icon="bx:bxl-facebook-circle"  ></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="ant-design:twitter-circle-filled" data-width="24" data-height="24"></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="akar-icons:instagram-fill" data-width="24" data-height="24"></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="akar-icons:google-contained-fill" data-width="24" data-height="24"></span>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -225,10 +540,12 @@
 
 
 
+    <script type=" text/javascript " src=" ../js/home.js "></script>
+    <script src=" https://code.iconify.design/2/2.0.4/iconify.min.js "></script>
+    <script src=" ../bootstrap/bootstrap-4.6.0-dist/js/bootstrap.bundle.js "></script>
+    <script src=" https://use.fontawesome.com/3af9727d51.js "></script>
+    <script src=" https://code.iconify.design/2/2.0.3/iconify.min.js "></script>
 
-    <script type="text/javascript" src="../js/home.js"></script>
-    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
-    <script src="../bootstrap/bootstrap-4.6.0-dist/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
