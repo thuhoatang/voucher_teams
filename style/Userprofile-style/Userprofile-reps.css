@@ -133,7 +133,15 @@ body{
 }
 
 
+/* Part 2.2.1: Service-left */
+.list_service{
+    margin-top: 10px;
+    width: 320px;
+    height: 1100px;
+    border-radius: 5px;
+    background-color: #ffffff;
 
+}
 
 
 
