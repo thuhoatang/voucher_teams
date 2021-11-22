@@ -154,6 +154,7 @@ body{
  .main-body {
     font-size: 15px;
  }
+
 /* Part 2.2.1: Service-left */
 .main-body .service_left{
             
@@ -214,6 +215,12 @@ body{
     margin: 2px 2px;
 }
 
+/* css for star checkbox */
+.rating .checkbox .iconify{
+    font-size: 20px; position:relative; top: -3.5px;
+}
+
+
 /* Part 2.2.1: Responsive Service-left */
 @media only screen and (max-width: 1024px){
     .service_left{
@@ -258,6 +265,7 @@ body{
     position: relative;
     top: -5px;
 }
+
 
 /* card */
 .card_product_right .star-widget input{
