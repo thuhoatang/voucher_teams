@@ -170,11 +170,22 @@
 .col-left b{
     color: #FFCD4E;font-size: 24px;  
 }
-.col-left button{
-    margin-left: 10px;
-    color: #DF2F4C;background-color: white; width: 123px;height: 52px;font-size:
-                                21px;margin-top: -40px; 
+.col-right button{
+
+    margin: 10px;
+    color: #DF2F4C;background-color: white; width: 100px;height: 40px;font-size:
+                                18px;
+                                margin-top:20px;
+
 }
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    #dropdown{
+        display: block;
+    }
+  }
 
 
 
