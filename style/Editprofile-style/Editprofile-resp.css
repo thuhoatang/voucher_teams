@@ -198,12 +198,15 @@ body{
 /* profile-personal */
 
 .profile-personal{
-    display: flex;
+    /* display: flex; */
     width: 100%;
     margin: 30px 0 0 20px;
-    padding: 20px 0;
+    padding: 20px 0 40px 0;
     border-radius: 10px;
     box-shadow:  -1px -1px 1px #ccc, 1px 1px 1px #ccc;
+}
+.personal-avt-full{
+    display: flex;
 }
 .personal-avt{
     width: 70px;
@@ -231,6 +234,34 @@ body{
 .personal-information .iconify{
     color: #DF2F4C !important;
     font-size: 15px;
+}
+.profile-personal-name{
+    width: 95%;
+    margin: 25px 0 0 0;
+}
+.personal-name-tilte{
+    margin-left: 50px;
+    /* margin-right: 40px; */
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.personal-name-item {
+    margin-left: 50px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+}
+.personal-name-item input{
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #cccc;
+    box-shadow:  -1px -1px 1px #ccc, 1px 1px 1px #ccc;
+}
+.personal-name-tilte p {
+    width: 40%;
+    margin-bottom: 10px;
 }
 
 
