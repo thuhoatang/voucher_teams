@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>home-of-store</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>all-shop</title>
+    <!-- link css bootstrap -->
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css" />
+    <!-- link font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" />
+    <!-- link style css -->
+    <link rel="stylesheet" href="../style/home-of-store-style/home_of_store.css" />
+
+    <!-- link style css style-for-adminShop -->
+    <link rel="stylesheet" href="../style/bootstrap-admin.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- bootstrap 5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        crossorigin="anonymous"></script>
+
+    <style>
+        table {
+            color: rgb(255, 0, 0);
+        }
+
+        tr {
+            border: none;
+            color: black;
+
+        }
+
+        td {
+            border: none;
+            font-size: 13px;
+
+        }
+
+        td svg {
+            margin-left: 10px;
+        }
+
+        .f_size {
+            font-size: 20px;
+        }
+
+
+        .c_E94560 {
+            color: #E94560;
+        }
+
+        #addVoucher {
+            float: right;
+            justify-content: right;
+        }
+    </style>
+
+
+
+</head>
+
+<body class="sb-nav-fixed">
+    <!-- Part 1: Header -->
+    <nav id="header-top" class="sb-topnav navbar navbar-expand navbar-dark py-4">
+        <!-- Part 1.1: Navbar Brand-->
+        <!-- Part 1.1.1: Logo - image -->
+        <a class="navbar-brand ps-3" href="index.html">
+            <img src="../image/logo_header.png" alt=""
+                style="width: 70%; height: 50%; margin-left: 5px; object-fit: cover" />
+        </a>
+        <!-- Part 1.1.2: Button toggle-->
+        <button class="btn btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
+            <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M0.984375 2.39062H17.4531C17.5992 2.39062 17.7188 2.27109 17.7188 2.125V0.265625C17.7188 0.119531 17.5992 0 17.4531 0H0.984375C0.838281 0 0.71875 0.119531 0.71875 0.265625V2.125C0.71875 2.27109 0.838281 2.39062 0.984375 2.39062ZM0.984375 16.4688H17.4531C17.5992 16.4688 17.7188 16.3492 17.7188 16.2031V14.3438C17.7188 14.1977 17.5992 14.0781 17.4531 14.0781H0.984375C0.838281 14.0781 0.71875 14.1977 0.71875 14.3438V16.2031C0.71875 16.3492 0.838281 16.4688 0.984375 16.4688ZM27.0156 21.1172H0.984375C0.838281 21.1172 0.71875 21.2367 0.71875 21.3828V23.2422C0.71875 23.3883 0.838281 23.5078 0.984375 23.5078H27.0156C27.1617 23.5078 27.2812 23.3883 27.2812 23.2422V21.3828C27.2812 21.2367 27.1617 21.1172 27.0156 21.1172ZM27.0156 7.03906H0.984375C0.838281 7.03906 0.71875 7.15859 0.71875 7.30469V9.16406C0.71875 9.31016 0.838281 9.42969 0.984375 9.42969H27.0156C27.1617 9.42969 27.2812 9.31016 27.2812 9.16406V7.30469C27.2812 7.15859 27.1617 7.03906 27.0156 7.03906Z"
+                    fill="#E94560" />
+            </svg>
+        </button>
+        <!-- Part 1.1.3: Form for search-->
+        <form class="
+          d-none d-md-inline-block
+          form-inline
+          ms-auto
+          me-0 me-md-3
+          my-2 my-md-0
+          mx-3
+        ">
+            <div class="input-group" style="
+            overflow: hidden;
+            border: 1.3px solid #e34;
+            background-color: rgb(255, 255, 255);
+            border-radius: 30px;
+          ">
+                <input class="form-control border-0 py-0" type="text" placeholder="Search for..."
+                    aria-label="Search for..." aria-describedby="btnNavbarSearch"
+                    style="background-color: rgb(255, 255, 255)" />
+                <button class="btn" id="btnNavbarSearch" type="button" style="background-color: rgb(255, 255, 255)">
+                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_978_2223)">
+                            <path
+                                d="M13.9437 12.2833C15.0936 10.7142 15.6086 8.76884 15.3857 6.83637C15.1628 4.9039 14.2185 3.12684 12.7417 1.86072C11.2649 0.594597 9.36442 -0.0672176 7.42058 0.00768172C5.47675 0.0825811 3.63287 0.888671 2.25785 2.26468C0.88282 3.64069 0.0780496 5.48514 0.0045412 7.42903C-0.0689672 9.37292 0.594207 11.2729 1.86139 12.7488C3.12857 14.2247 4.9063 15.1678 6.83892 15.3893C8.77155 15.6108 10.7165 15.0944 12.2848 13.9434H12.2836C12.3192 13.9909 12.3572 14.036 12.4 14.0799L16.9718 18.6518C17.1945 18.8746 17.4966 18.9999 17.8116 19C18.1266 19.0001 18.4287 18.8751 18.6516 18.6524C18.8744 18.4297 18.9996 18.1277 18.9997 17.8127C18.9998 17.4977 18.8748 17.1955 18.6522 16.9727L14.0803 12.4008C14.0378 12.3578 13.9922 12.3181 13.9437 12.2821V12.2833ZM14.2501 7.7185C14.2501 8.5762 14.0812 9.4255 13.7529 10.2179C13.4247 11.0103 12.9436 11.7303 12.3371 12.3368C11.7306 12.9433 11.0106 13.4244 10.2182 13.7526C9.42583 14.0808 8.57654 14.2498 7.71884 14.2498C6.86114 14.2498 6.01185 14.0808 5.21944 13.7526C4.42703 13.4244 3.70703 12.9433 3.10055 12.3368C2.49407 11.7303 2.01298 11.0103 1.68475 10.2179C1.35653 9.4255 1.18759 8.5762 1.18759 7.7185C1.18759 5.98631 1.8757 4.32506 3.10055 3.10021C4.3254 1.87537 5.98664 1.18725 7.71884 1.18725C9.45103 1.18725 11.1123 1.87537 12.3371 3.10021C13.562 4.32506 14.2501 5.98631 14.2501 7.7185V7.7185Z"
+                                fill="#DF2F4C" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_978_2223">
+                                <rect width="19" height="19" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+            </div>
+        </form>
+        <!-- Part 1.1.4: Button messenger -->
+        <div class="messenger mx-2">
+            <button class="bg-transparent border-0">
+                <svg width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M11.7471 9.89995C11.7471 9.68115 11.8504 9.47131 12.0343 9.31659C12.2183 9.16187 12.4678 9.07495 12.7279 9.07495H18.6128C18.873 9.07495 19.1224 9.16187 19.3064 9.31659C19.4903 9.47131 19.5936 9.68115 19.5936 9.89995C19.5936 10.1188 19.4903 10.3286 19.3064 10.4833C19.1224 10.638 18.873 10.725 18.6128 10.725H12.7279C12.4678 10.725 12.2183 10.638 12.0343 10.4833C11.8504 10.3286 11.7471 10.1188 11.7471 9.89995Z"
+                        fill="#E94560" />
+                    <path
+                        d="M12.7279 12.375C12.4678 12.375 12.2183 12.4619 12.0343 12.6166C11.8504 12.7714 11.7471 12.9812 11.7471 13.2C11.7471 13.4188 11.8504 13.6286 12.0343 13.7834C12.2183 13.9381 12.4678 14.025 12.7279 14.025H16.6512C16.9113 14.025 17.1608 13.9381 17.3447 13.7834C17.5287 13.6286 17.632 13.4188 17.632 13.2C17.632 12.9812 17.5287 12.7714 17.3447 12.6166C17.1608 12.4619 16.9113 12.375 16.6512 12.375H12.7279Z"
+                        fill="#E94560" />
+                    <path
+                        d="M15.6693 1.6499C13.6274 1.64932 11.6203 2.09561 9.84547 2.9449C8.0706 3.7942 6.58896 5.01728 5.54612 6.49397C4.50329 7.97066 3.93514 9.65016 3.89751 11.3674C3.85987 13.0847 4.35405 14.7807 5.33147 16.2887L3.9387 20.3972C3.8897 20.5415 3.88839 20.6942 3.93493 20.8391C3.98146 20.9839 4.07408 21.1154 4.20281 21.2192C4.33154 21.3231 4.49151 21.3955 4.66549 21.4285C4.83948 21.4616 5.0209 21.4542 5.19023 21.407L9.77655 20.1216C11.3397 20.8814 13.0897 21.3286 14.8912 21.4285C16.6926 21.5283 18.4973 21.2783 20.1655 20.6977C21.8337 20.1171 23.3207 19.2215 24.5116 18.0801C25.7025 16.9388 26.5652 15.5823 27.0331 14.1156C27.501 12.649 27.5615 11.1114 27.2099 9.62193C26.8583 8.13245 26.1041 6.73096 25.0055 5.52589C23.907 4.32081 22.4936 3.34446 20.8747 2.67235C19.2557 2.00025 17.4747 1.65041 15.6693 1.6499V1.6499ZM5.86111 11.5499C5.86144 9.7194 6.58552 7.94097 7.91936 6.49459C9.25321 5.04822 11.1211 4.01605 13.2289 3.56059C15.3367 3.10512 17.5647 3.25223 19.5622 3.97875C21.5597 4.70527 23.2132 5.96993 24.2624 7.57365C25.3116 9.17737 25.6969 11.029 25.3576 12.8372C25.0184 14.6453 23.9739 16.3072 22.3885 17.5612C20.8031 18.8152 18.767 19.5901 16.6005 19.7638C14.4341 19.9376 12.2605 19.5005 10.4219 18.5211C10.2989 18.4556 10.1601 18.4138 10.0156 18.399C9.87106 18.3842 9.7244 18.3966 9.58627 18.4353L6.33387 19.3478L7.33431 16.4091C7.37076 16.3009 7.38051 16.1876 7.36297 16.0761C7.34543 15.9645 7.30096 15.8572 7.2323 15.7607C6.33163 14.487 5.85781 13.0319 5.86111 11.5499Z"
+                        fill="#E94560" />
+                    <path
+                        d="M24.0567 24.6624L19.3448 22.6824C20.2079 22.4795 21.0377 22.2089 21.8223 21.8772L24.4961 23.0025L33.3235 19.29V18.1499C33.3235 17.7122 33.1168 17.2926 32.7489 16.9831C32.381 16.6737 31.8821 16.4999 31.3618 16.4999H28.078C28.3782 15.9719 28.6292 15.4191 28.8313 14.8499H31.3618C32.4023 14.8499 33.4002 15.1975 34.136 15.8164C34.8717 16.4353 35.2851 17.2746 35.2851 18.1499V26.3999C35.2851 27.2751 34.8717 28.1144 34.136 28.7333C33.4002 29.3522 32.4023 29.6999 31.3618 29.6999H17.6303C16.5898 29.6999 15.5919 29.3522 14.8561 28.7333C14.1204 28.1144 13.707 27.2751 13.707 26.3999V22.9844C14.3485 23.0603 15.0017 23.0999 15.6687 23.0999V26.3999C15.6687 26.8375 15.8753 27.2571 16.2432 27.5666C16.6111 27.876 17.1101 28.0499 17.6303 28.0499H31.3618C31.8821 28.0499 32.381 27.876 32.7489 27.5666C33.1168 27.2571 33.3235 26.8375 33.3235 26.3999V21.1347L24.9355 24.6624C24.7991 24.7199 24.6486 24.7498 24.4961 24.7498C24.3435 24.7498 24.193 24.7199 24.0567 24.6624V24.6624Z"
+                        fill="#E94560" />
+                </svg>
+            </button>
+        </div>
+        <!-- Part 1.1.5: Button Bell -->
+        <div class="bell mx-2">
+            <button class="bg-transparent border-0">
+                <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.5098 11.9167C17.3178 5.0469 15.6574 2.4373 10.4424 2.5465C8.58464 2.5843 9.02984 1.1997 7.61304 1.7247C6.19904 2.2497 7.41284 3.0183 5.96524 4.2069C1.90244 7.5431 2.27624 10.6287 4.16064 17.9829C4.95444 21.0811 2.24684 21.2323 3.31784 24.2339C4.10044 26.4235 9.86844 27.3405 15.9528 25.0837C22.0386 22.8255 25.8732 18.3441 25.0906 16.1545C24.0196 13.1515 21.8552 14.8091 20.5098 11.9167ZM15.2934 23.2329C9.85864 25.2489 5.39264 24.0645 5.20364 23.5367C4.87884 22.6267 6.95784 19.5943 13.171 17.2885C19.3842 14.9827 22.852 15.8381 23.2146 16.8531C23.4288 17.4537 20.7296 21.2155 15.2934 23.2329ZM13.5462 18.3413C10.7056 19.3955 8.73164 20.6009 7.45204 21.6859C8.35224 22.5035 10.0378 22.7023 11.7164 22.0793C13.8542 21.2883 15.1688 19.4669 14.6494 18.0137L14.627 17.9633C14.2756 18.0781 13.9158 18.2027 13.5462 18.3413Z"
+                        fill="#CD1A37" />
+                </svg>
+            </button>
+        </div>
+        <!-- Part 1.1.6: Button avatar -->
+        <div class="avatar mx-3">
+            <div class="div-avatar rounded-circle">
+                <img class="img-avatar" src="../image/home-of-store/man.png" alt="" />
+            </div>
+        </div>
+    </nav>
+
+    <!-- Part 2: Main - body -->
+    <div id="layoutSidenav" class="main-content">
+        <!-- Part 2.1: main - body - left fixel -->
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark bg-white" id="sidenavAccordion">
+                <!-- Part 2.1: Left menu -->
+                <div class="sb-sidenav-menu">
+                    <div class="nav mt-4">
+                        <!-- Part 2.1.2: Dashboard menu -->
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="bx:bxs-dashboard" style="font-size: 20px"></span>
+                            </div>
+                            Dashboard
+                        </a>
+                        <!-- Part 2.1.3: Product menu -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                            data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="icon-park-outline:health-products"
+                                    style="font-size: 20px"></span>
+                            </div>
+                            Product
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <!-- Part 2.1.3.1: Sub menu product -->
+                        <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" onclick="openStaticNavigation();">List product</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Add product</a>
+                                <a class="nav-link" href="layout-sidenav-light.html">Edit product</a>
+                            </nav>
+                        </div>
+                        <!-- Part 2.1.4: Voucher menu -->
+                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
+                            aria-expanded="false" aria-controls="collapsePages">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="fluent:gift-card-16-filled"
+                                    style="font-size: 20px"></span>
+                            </div>
+                            Voucher
+                            <div class="sb-sidenav-collapse-arrow">
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <!-- Part 2.1.4.1: Sub menu Voucher -->
+                        <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
+                            data-bs-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
+                                    aria-controls="pagesCollapseAuth">
+                                    List voucher
+                                </a>
+
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Add voucher
+                                </a>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
+                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
+                                    aria-controls="pagesCollapseError">
+                                    Edit voucher
+                                </a>
+                            </nav>
+                        </div>
+                        <!-- Part 2.1.5: Employee menu-->
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="clarity:employee-group-solid"
+                                    style="font-size: 20px"></span>
+                            </div>
+                            Employee
+                        </a>
+                        <!-- Part 2.1.6: Customer menu -->
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="si-glyph:customer-support"
+                                    style="font-size: 20px"></span>
+                            </div>
+                            Customer
+                        </a>
+                        <!-- Part 2.1.7: Order menu -->
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="mdi:cart-heart" style="font-size: 20px"></span>
+                            </div>
+                            Order
+                        </a>
+                        <!-- Part 2.1.8: Statistics menu -->
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="wpf:statistics" style="font-size: 20px"></span>
+                            </div>
+                            Statistics
+                        </a>
+                        <!-- Part 2.1.9: Profile menu -->
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon">
+                                <span class="iconify mr-3" data-icon="healthicons:ui-user-profile"
+                                    style="font-size: 20px"></span>
+                            </div>
+                            Profile
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer bg-success">
+                    <div class="small">Logged in as:</div>
+                    Start Bootstrap
+                </div>
+            </nav>
+        </div>
+
+        <!-- Part 2.2: Phần nội dung chính - được thay đổi  -->
+        <div id="layoutSidenav_content">
+            <div class="contrainer">
+                <main>
+                    <div class="container-fluid px-4">
+                        <label class="f_size c_E94560" style="font-weight: 500;" for="">Home/Voucher/<label for=""
+                                style="margin-top: 20px;">List</label></label>
+
+                        <div
+                            style=" padding: 25px;height: auto;margin: auto;box-shadow: 0px 0px 7px rgb(155, 155, 155) ;margin-bottom: 50px;margin-top: 20px;background-color: white;">
+                            <label class="c_E94560 f_size" style="font-weight: bold;">VOUCHER LIST</label>
+                            <svg id="addVoucher" width="39" height="39" viewBox="0 0 39 39" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.875 0C3.58207 0 2.34209 0.513615 1.42785 1.42785C0.513615 2.34209 0 3.58207 0 4.875L0 34.125C0 35.4179 0.513615 36.6579 1.42785 37.5721C2.34209 38.4864 3.58207 39 4.875 39H34.125C35.4179 39 36.6579 38.4864 37.5721 37.5721C38.4864 36.6579 39 35.4179 39 34.125V4.875C39 3.58207 38.4864 2.34209 37.5721 1.42785C36.6579 0.513615 35.4179 0 34.125 0L4.875 0ZM20.7188 10.9688V18.2812H28.0312C28.3545 18.2812 28.6645 18.4097 28.893 18.6382C29.1216 18.8668 29.25 19.1768 29.25 19.5C29.25 19.8232 29.1216 20.1332 28.893 20.3618C28.6645 20.5903 28.3545 20.7188 28.0312 20.7188H20.7188V28.0312C20.7188 28.3545 20.5903 28.6645 20.3618 28.893C20.1332 29.1216 19.8232 29.25 19.5 29.25C19.1768 29.25 18.8668 29.1216 18.6382 28.893C18.4097 28.6645 18.2812 28.3545 18.2812 28.0312V20.7188H10.9688C10.6455 20.7188 10.3355 20.5903 10.107 20.3618C9.8784 20.1332 9.75 19.8232 9.75 19.5C9.75 19.1768 9.8784 18.8668 10.107 18.6382C10.3355 18.4097 10.6455 18.2812 10.9688 18.2812H18.2812V10.9688C18.2812 10.6455 18.4097 10.3355 18.6382 10.107C18.8668 9.8784 19.1768 9.75 19.5 9.75C19.8232 9.75 20.1332 9.8784 20.3618 10.107C20.5903 10.3355 20.7188 10.6455 20.7188 10.9688Z"
+                                    fill="#F44965" />
+                            </svg>
+
+
+
+                        </div>
+                        <div class="row">
+
+
+                            <div class="card mb-4">
+
+                                <div class="card-body">
+                                    <table id="datatablesSimple" class="table-striped"
+                                        style="border: none;color: white;">
+                                        <thead style="background-color: black;">
+                                            <tr style="border: none;background-color: #dc3545; color: white;">
+                                                <th style="border: none;">ID</th>
+                                                <th style="border: none;">Title</th>
+                                                <th style="border: none;">Service</th>
+                                                <th style="border: none;">Event</th>
+                                                <th style="border: none;">Quantity</th>
+
+                                                <th style="border: none;"> Price </th>
+                                                <th style="border: none;">Action</th>
+
+
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+                                            <tr style="border: none;">
+                                                <td>101</td>
+                                                <td>Skin care voucher</td>
+                                                <td>Beautify</td>
+                                                <td>20/10 celebration</td>
+                                                <td>10</td>
+                                                <td>200.000đ</td>
+                                                <td><svg width="26" height="25" viewBox="0 0 26 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.29102 17.7219L11.8879 17.7063L21.9212 7.76876C22.315 7.37501 22.5316 6.85209 22.5316 6.29584C22.5316 5.73959 22.315 5.21668 21.9212 4.82293L20.2691 3.17084C19.4816 2.38334 18.1077 2.38751 17.3264 3.16772L7.29102 13.1073V17.7219ZM18.7962 4.64376L20.4514 6.29272L18.7879 7.94064L17.1358 6.28959L18.7962 4.64376ZM9.37435 13.9761L15.6556 7.75418L17.3077 9.40626L11.0275 15.6261L9.37435 15.6313V13.9761Z"
+                                                            fill="#DF2F4C" />
+                                                        <path
+                                                            d="M5.20833 21.875H19.7917C20.9406 21.875 21.875 20.9406 21.875 19.7917V10.7625L19.7917 12.8458V19.7917H8.49792C8.47083 19.7917 8.44271 19.8021 8.41563 19.8021C8.38125 19.8021 8.34687 19.7927 8.31146 19.7917H5.20833V5.20833H12.3406L14.424 3.125H5.20833C4.05937 3.125 3.125 4.05937 3.125 5.20833V19.7917C3.125 20.9406 4.05937 21.875 5.20833 21.875Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg><svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M11 0C4.92486 0 0 4.92486 0 11C0 17.0751 4.92486 22 11 22C17.0751 22 22 17.0751 22 11C22 4.92486 17.0751 0 11 0ZM7.54371 4.8125L11 8.26879L14.4563 4.8125L17.1875 7.54371L13.7312 11L17.1875 14.4563L14.4563 17.1875L11 13.7312L7.54371 17.1875L4.8125 14.4563L8.26879 11L4.8125 7.54371L7.54371 4.8125Z"
+                                                            fill="#DF2F4C" />
+                                                    </svg>
+
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                </main>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/home_of_store.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', event => {
+            // Simple-DataTables
+            // https://github.com/fiduswriter/Simple-DataTables/wiki
+
+            const datatablesSimple = document.getElementById('datatablesSimple');
+            if (datatablesSimple) {
+                new simpleDatatables.DataTable(datatablesSimple);
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>
