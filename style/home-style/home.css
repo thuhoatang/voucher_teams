@@ -260,14 +260,24 @@ body{
 
 .card_product_right .card-body a{
     position: relative;
-    top: -10px;
+    bottom: -10px;
 }
+
 
 .card_product_right .card-body .star-widget{
     position: relative;
-    top: -5px;
+    bottom: -5px;
 }
 
+.card_product_right .card-body  .discount_title{
+    position: relative;
+    bottom: -5px;
+}
+
+.cover{
+    position: absolute;
+    bottom: -7px;
+}
 
 /* card */
 .card_product_right .star-widget input{
@@ -314,7 +324,6 @@ body{
 .card:hover .middle {
  opacity: 1;
  margin-top: -55px;
- 
 }
 
 .text_middle {
