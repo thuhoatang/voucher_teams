@@ -283,7 +283,7 @@ body{
  }
 /* Part 2.2.1: Service-left */
 .main-body .service_left{
-    
+    margin-right: 15px;
     width: 250px;
     height: 1100px;
     border-radius: 5px;
@@ -291,6 +291,7 @@ body{
 }
 .main-body .service_left li{
     color: #464444;
+    padding: 12px 20px 12px 24px;
     background-color: transparent;
 }
 .main-body .service_left li .iconify.ml-2.mr-5{
@@ -326,17 +327,23 @@ body{
     border-color: #dc3545;
 }
 
-.service_left .checkbox input[type="checkbox"]:checked + i::after{
-    top: 1px;
-    left: 1px;
-    content: "";
+element.style {
+    color: rgb(255, 187, 0);
+}
+.rating .checkbox .iconify {
+    font-size: 20px;
     position: relative;
-    height: 8px;
-    width: 8px;
+    top: -3.5px;
+}
+.service_left .checkbox input[type="checkbox"]:checked + i::after{
+    top: 2.2px;
+    left: 2px;
+    content: "";
+    position: absolute;
+    height: 9.5px;
+    width: 10px;
     background-color: #dc3545;
     border-radius: 2px 2px;
-    display: flex;
-    justify-content: center;
 }
 .service_left .checkbox i:checked i {
     background-color: #dc3545;
@@ -349,6 +356,8 @@ body{
     }
 }
 
+
+
 /* Part 2.2.2: Card-product-right */ 
 .card_product_right{
     margin: 0 auto;
@@ -356,21 +365,38 @@ body{
 }
 /* set css for col card */
 .card_product_right .child-1{
-    width: 250px;
+    width: 800px;
     height: 340px;
-    margin-left: 10px;
-    margin-right: 10px;
+    
     margin-bottom: 10px ;
     border-radius: 5px;
+    padding: 0 10px;
 }
 /* css for card */
 .card_product_right .child-1 .card{
     width: 100%;
     height: 100%;
+    margin-left: 0px;
     padding-top: 10px;
     border-radius: 10px;
     box-shadow: rgb(182, 178, 174, 0.2) 1px 1px;
 }
+
+/* responsive for card */
+@media only screen and (max-width: 991px){
+    .card_product_right .child-1{
+        width: 100%;
+        height: 340px;
+        
+        margin-bottom: 10px ;
+        border-radius: 5px;
+        padding: 0 10px;
+    }
+}
+
+
+
+
 /* css for card body */
 .card_product_right .card-body{
     position: relative;
@@ -379,16 +405,23 @@ body{
 
 .card_product_right .card-body a{
     position: relative;
-    top: -10px;
-    color: #DF2F4C;
+    bottom: -10px;
 }
-.card_product_right .card-body a:hover{
-    opacity: 0.8;
-    text-decoration: none ;
-}
+
+
 .card_product_right .card-body .star-widget{
     position: relative;
-    top: -5px;
+    bottom: -5px;
+}
+
+.card_product_right .card-body  .discount_title{
+    position: relative;
+    bottom: -5px;
+}
+
+.cover{
+    position: absolute;
+    bottom: -7px;
 }
 
 /* card */
@@ -436,7 +469,6 @@ body{
 .card:hover .middle {
  opacity: 1;
  margin-top: -55px;
- 
 }
 
 .text_middle {
@@ -462,6 +494,17 @@ body{
     justify-content: center;
     margin-top: 23px;
     font-size: 15px;
+}
+
+.container.pagination .pagination li a{
+    color: #e56773;
+
+}
+
+/* hover */
+.container.pagination .pagination li:nth-of-type(2) a{
+    background-color: #e94560;
+    color: #ffff;
 }
 /* responsive card_voucher */
 @media only screen and (max-width: 599px){
