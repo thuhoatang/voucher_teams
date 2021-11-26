@@ -253,18 +253,19 @@ body{
     display: flex;
     justify-content: space-between;
 }
-.personal-name-item input{
+.personal-name-item input, .personal-name-item .form-select {
     width: 300px;
     border-radius: 5px;
     border: 1px solid #cccc;
     box-shadow:  -1px -1px 1px #ccc, 1px 1px 1px #ccc;
 }
+.personal-name-item .form-select{
+    padding: 8px 12px;
+}
 .personal-name-tilte p {
     width: 40%;
     margin-bottom: 10px;
 }
-
-
 
 /* Footer */
 .container-fluid.footer{
