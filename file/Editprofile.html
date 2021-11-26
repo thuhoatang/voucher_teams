@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../style/Editprofile-style/Editprofile-resp.css">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>User profile</title>
+    <title>Edit profile</title>
 </head>
 <body>
      <!-- Part 1:  Header -->
@@ -100,7 +100,9 @@
                         <span class="iconify " data-icon="ant-design:user-outlined" data-width="60" data-height="60"></span>
                         <h1> Edit Profile </h1>
                     </div>
-                    <button type="button" class="btn btn-outline-danger">Back to profile</button>
+                    <a href="./Userprofile.html">
+                        <button type="button"  class="btn btn-outline-danger">Back to profile</button>
+                    </a>
                 </div>
 
                 <!--  -->
@@ -113,6 +115,7 @@
                             <span class="iconify" data-icon="ant-design:camera-filled" data-width="18" data-height="18"></span>
                         </div>
                     </div>
+                    
                     <div class="profile-personal-name">
                         <div class="personal-name-tilte">
                             <p>First name</p>
@@ -123,6 +126,7 @@
                             <input type="text" name="Lastname" id="" class="form-control">
                         </div>
                     </div>
+
                     <div class="profile-personal-name">
                         <div class="personal-name-tilte">
                             <p>Email</p>
@@ -133,25 +137,54 @@
                             <input type="text" name="Phone" id="" class="form-control">
                         </div>
                     </div>
+
                     <div class="profile-personal-name">
                         <div class="personal-name-tilte">
                             <p>Date of birth</p>
-                            <p>Card number</p>
+                            <p>Address</p>
                         </div>
                         <div class="personal-name-item">
                             <input type="date" name="dateofbirth" id="" class="form-control">
-                            <input type="text" name="Cardnumber" id="" class="form-control">
+                            <input type="text" name="Adress" id="" class="form-control">
                         </div>
                     </div>
+
                     <div class="profile-personal-name">
                         <div class="personal-name-tilte">
-                            <p>Adress</p>
+                            <p>Province</p>
+                            <p>District</p>
                         </div>
                         <div class="personal-name-item">
-                            <input type="text" name="Adress" id="" class="form-control">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>--Select Province-- </option>
+                                <option value="1">Ho Chi Minh</option>
+                                <option value="2">Da Nang</option>
+                                <option value="3">Ha Noi</option>
+                              </select>
+                              <select class="form-select" aria-label="Default select example">
+                                <option selected>--Select District-- </option>
+                                <option value="1">Hai Chau</option>
+                                <option value="2">Cam Le</option>
+                                <option value="3">Hoa Khanh</option>
+                              </select>
+                        </div>
+                    </div>
+
+                    <div class="profile-personal-name">
+                        <div class="personal-name-tilte">
+                            <p>Wards</p>
+                        </div>
+                        <div class="personal-name-item">
+                            <select class="form-select" aria-label="Default select example">
+                                <option selected>--Select Wards-- </option>
+                                <option value="1">Thanh Binh</option>
+                                <option value="2">Hai Chau I</option>
+                                <option value="3">Thach Thang</option>
+                              </select>
                             <button type="button" class="btn btn-danger" style="margin-right: 155px;">Save changes</button>
                         </div>
                     </div>
+
                 </div>
                 <!--  -->
                 
