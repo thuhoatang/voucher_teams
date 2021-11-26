@@ -218,7 +218,9 @@ body{
     object-fit: cover;
     border-radius: 50%;
 }
-
+.personal-adress{
+    margin: 0;
+}
 /* Item 2 profile-personal-name */
 .profile-personal-name{
     width: 100%;
@@ -306,7 +308,7 @@ body{
     .personal-name-tilte p , .personal-name-item p, .personal-adress-tilte p, .personal-adress-item p{
         width: 100%;
         height: 40px;
-        
+        margin-left: 10px;
     }
 }
 
