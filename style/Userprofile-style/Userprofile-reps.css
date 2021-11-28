@@ -178,20 +178,22 @@ body{
 .my-profile button{
     /* height: 100%; */
     padding: 10px 30px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     margin-right: 20px;
 }
 .my-profile-heading{
     color: #DF2F4C;
     justify-content: center;
     align-items: center;
+    margin-left: 30px;
 }
 .my-profile-heading span{
     width: 50px;
     height: 50px;
 }
 .my-profile-heading h1 {
-    margin: 5px 0 0 10px;
+    margin: 20px 0 0 10px;
     color: #DF2F4C;
 }
 
@@ -284,6 +286,7 @@ body{
     }
     .my-profile-heading h1 {
         font-size: 25px;
+        margin: 10px 0 0 10px;
     }
     .my-profile button{
         padding: 5px 30px;
