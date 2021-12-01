@@ -267,12 +267,11 @@ body{
     margin-bottom: 10px;
 }
 .profile-personal-button{
-    margin: 50px 10px auto;
-    display: flex;
-    justify-content: flex-end;
+    width: 300px;
+    /* margin: 0; */
 }
 .profile-personal-button button{
-    width: 38%;
+    width: 100%;
 }
 
 @media only screen and (max-width: 1200px){
@@ -298,7 +297,7 @@ body{
     .personal-information{
         font-size: 14px;
     }
-    .personal-name-item input, .personal-name-item .form-select {
+    .personal-name-item input, .personal-name-item .form-select, .personal-name-item .profile-personal-button{
         width: 40%;
     }
     
@@ -321,8 +320,9 @@ body{
     .personal-name-item{
         width: 100%;
     }
-    .personal-name-item input, .personal-name-item .form-select {
+    .personal-name-item input, .personal-name-item .form-select, .personal-name-item .profile-personal-button {
         width: 90%;
+        margin-top: 10px;
     }
     .personal-name-tilte{
         width: 60%;
@@ -333,13 +333,6 @@ body{
     }
     .profile-personal-name{
         margin: 0;
-    }
-    .personal-name-item input, .personal-name-item .form-select{
-        margin-top: 10px;
-    }
-    .profile-personal-button{
-         margin: 30px 39px auto;
-
     }
 }
 
