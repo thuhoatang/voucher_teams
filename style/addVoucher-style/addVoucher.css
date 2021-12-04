@@ -29,6 +29,7 @@
     background: #ffff;
   }
   
+
   #layoutSidenav_content{
     background: #EBF2F5;
   }
@@ -41,6 +42,8 @@
   .sb-sidenav-footer.bg-success {
     color: rgb(94, 91, 91) ;
   }
+
+
   /* Part 2: Nội dung chính */
 
   #layoutSidenav_content .path a{
@@ -62,8 +65,8 @@
   }
 
   #layoutSidenav_content .form-add-voucher {
-      width: 60%;
-      height: 450px;
+      width: 65%;
+      height: 850px;
       background: rgb(255, 255, 255); 
      
   }
@@ -80,6 +83,16 @@
 
   }
   /*  */
+#btn_choose_product{
+  background: #DF2F4C; font-size: 13px; height: 35px; color: white;
+  margin-top: 27px;
+}
+
+#btn_chosse_img{
+  background: #df2f4c; font-size: 13px; height: 35px; margin-top: 27px;
+}
+
+
 
 
   /* calendar */
@@ -114,7 +127,7 @@
     padding-bottom: 8px;
     padding-right: 0px;
     box-shadow: rgba(192, 77, 77, 0.2) 0px 8px 24px;
-    width: 40.5%;
+    width: 60%;
   }
  #time-start{
     border: 1px solid rgb(233, 106, 106);
@@ -135,6 +148,10 @@
 	position: absolute;
 	z-index: -1;
 } */
+
+#layoutSidenav_content  .form-add-voucher .form-img-voucher{
+  /* display: none; */
+}
 
  .label_input {
   font-size: 13px;
@@ -159,8 +176,6 @@
     background: #ffffff;
 }
 
-
-
 #layoutSidenav_content .form-img-voucher .titile-add-voucher-form{
   height: 55px;
   width: 100%;
@@ -181,15 +196,14 @@ font-size: 13px;
   
 }
 
-
-
 #quantity-img-voucher{
   /* display: flex; */
-  width: 70px;
+  height: 30px;
+  width: 80px;
   border-radius: 5% 0.7px solid;
   padding: 2px 5px;
   margin-top: 10px;
-  margin-right: 20px;
+  /* margin-right: 20px; */
   /* justify-content: center; */
 }
 
@@ -203,7 +217,6 @@ font-size: 13px;
   
  }
 
-
  .carousel-inner:hover img {
   opacity: 0.6;
  }
@@ -212,3 +225,161 @@ font-size: 13px;
   opacity: 1;
   margin-top: -55px;
  }
+
+ /* reposive for  main_content*/
+ .main_content .container-fluid.form-add-img-voucher {
+   display: flex;
+   justify-content:space-around;
+   height: auto;
+ }
+
+ @media(min-width: 300px) and (max-width: 1023px) {
+
+  .main_content .container-fluid.form-add-img-voucher{
+    display: block;
+    height: 1420px;
+  }
+
+  #layoutSidenav_content .form-add-voucher {
+    width: 100%;
+    height: 1400px;
+    background: rgb(255, 255, 255); 
+}
+
+#layoutSidenav_content .form-img-voucher{
+  width: 100%;
+    height: 330px;
+    background: #ffffff;
+    padding: 0 5%;
+ 
+}
+}
+
+@media(min-width: 575px) and (max-width: 1023px) {
+  .main_content .container-fluid.form-add-img-voucher{
+    display: block;
+    height: 1420px;
+  }
+  
+#layoutSidenav_content .form-img-voucher{
+  width: 100%;
+    height: 330px;
+    background: #ffffff;
+    padding: 0 5%;
+    position:relative;
+    top: -450px;
+}
+}
+
+@media(min-width: 300px) and (max-width: 575px){
+  .main_content .container-fluid.form-add-img-voucher{
+    display: block;
+    height: 1500px;
+  }
+  #layoutSidenav_content .form-add-voucher {
+    width: 100%;
+    height: 1500px;
+    background: rgb(255, 255, 255); 
+}
+  #layoutSidenav_content .form-img-voucher{
+    width: 100%;
+      height: 330px;
+      background: #ffffff;
+      padding: 0 5%;
+      position: relative;
+      top: -400px;
+  }
+}
+
+
+ @media(max-width: 600px){
+  
+  #btn_choose_product{
+    background: #DF2F4C; font-size: 13px; height: 35px; color: white;
+    margin-top: 27px;
+    width: 100%;
+  }
+  
+  #btn_chosse_img{
+    background: #df2f4c; font-size: 13px; height: 35px; margin-top: 27px;
+    width: 100%;
+  }
+  
+ }
+
+
+/* Footer */
+.container-fluid.footer{
+  margin: auto;
+  background-color: #0F3460;
+}
+.row.row_footer{
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.frame{
+  height: 100%;
+  width: 80%;
+}
+.logo_footer{
+  width: 80%;
+  height: 180px;
+  
+}
+.text-uppercase{
+  margin-top: 20px;
+  font-family: 'Varela Round', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+.text_reset{
+  font-family: 'Varela Round', sans-serif;
+  color: #AEB4BE !important;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.footer_icon{
+  height: 20px;
+  margin-bottom: 20px;
+}
+.footer_icon a, .footer_icon a:hover  {
+text-decoration: none;
+}
+.footer_icon .iconify{
+  margin-right: 20px;
+  width: 20px;
+  height: 20px;
+  color: white !important;
+}
+.footer_icon .iconify:hover{
+  opacity: 0.6;
+}
+
+.contract, .aboutus, .image{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .category-list-col{
+      margin : 7px 0;
+  }
+  .category-list-row{
+      margin-top: 0px;
+  }
+  .contract, .aboutus{
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+  }
+  .image {
+      display: none;
+  }
+}
+
