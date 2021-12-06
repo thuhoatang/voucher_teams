@@ -1,0 +1,521 @@
+*{
+    font-family: 'Varela Round', sans-serif;
+    margin: O auto;
+    
+}
+
+body{
+    background: #EBF2F5;
+}
+
+/* fixel header */
+#site-header{
+    top: 0;
+    width: 100%;
+    height: 110px;
+    position: sticky;
+    transition: all .3s ease;
+    z-index: 100;
+    background-color: rgb(255, 255, 255);
+}
+/* css for header hiding and showing */
+#site-header.hide{
+    top: -117px;
+}
+
+.img_logo_header{
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.container_input span{
+    border-radius: 30px;
+}
+
+.container_input input{
+    border-radius: 30px;
+}
+/* button category */
+#listview-category {
+    display: none;
+    position: relative;
+    top: -25px; 
+}
+
+
+#listview-category .iconify.ml-2.mr-5{
+    color: #e94560;
+}
+#listview-category  li:hover .iconify.ml-2.mr-5{
+    color: #ffffff;
+}
+#listview-category  li:hover{
+    color: #ffffff;
+}
+#listview-category  li:hover{
+    background-color: #e6a7ad;
+    opacity: 1;
+}
+
+/* button for user */
+
+/* user btn */
+#btn-cart , #btn-user02{
+    width: 45px;
+    height: 45px;
+
+}
+.btn_cart , .btn_user{
+    background-color: #DF2F4C;
+}
+
+#listview-user{
+    display: none;
+    justify-content: end;
+}
+#listview-user{
+    position: relative;
+    margin-top: -20px;
+    top: -45px;
+    right: -39%;
+}
+#listview-user li{
+   
+    background: #ffffff;
+    color: #dc3545;
+    border: 0.2px solid #dc3545;
+}
+#listview-user li:hover{
+    background: #fde4e4;
+    color: #dc3545;
+}
+@media only screen and (max-width: 587px) {
+    .search_bar{
+        display: none;
+    }
+    .container-fluid.header .row{
+        display: flex;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .search_bar{
+        display: none;
+    }
+    .container-fluid.header .row{
+        display: flex;
+    }
+    #listview-user{
+        position: relative;
+        margin-top: -20px;
+        top: -30px;
+        right: -30%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    
+    #listview-user{
+        position: relative;
+        margin-top: -20px;
+        top: -10px;
+        right: -35%;
+    }
+}
+
+/* menu header */
+.container_menu_header ul li{
+    list-style-type: none;
+}
+
+.container_menu_header{
+    padding-bottom: 20px;
+}
+
+/* Part 2: body-main */
+.container-fluid.body-main{
+ position: relative;
+ display: flex;
+ justify-content: space-around;
+}
+
+/* Part 2.1: voucher-cart */
+.voucher-cart{
+    position: relative;
+    width: 65%;
+    /* height: 500px; */
+    background: #ffffff;
+    margin: 0px auto;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.voucher-cart .voucher-title{
+    height: 50px;
+    background: #ffffff;
+    width: 100%;
+    margin: 0px auto;
+    border-bottom: rgb(230, 230, 230) 1px solid;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+/* css for checkbox */
+.voucher-cart .checkbox input[type=checkbox]{
+    display: none;
+ 
+ }
+ .voucher-cart .checkbox i{
+     height: 18px;
+     width: 18px;
+     display: inline-block;
+     border: 2px solid #dc3545;
+     border-radius: 2px;
+    position: relative;
+ }
+ 
+ /* hover checkbox */
+ .voucher-cart.checkbox:hover{
+     cursor: pointer;
+ }
+ 
+ .voucher-cart .checkbox:hover i{
+     border-color: #dc3545;
+ }
+ 
+ .voucher-cart .checkbox input[type="checkbox"]:checked + i::after{
+     content: "";
+     position: absolute;
+     height: 9.5px;
+     width: 10px;
+     background: #dc3545;
+    top: 2.2px;
+    left: 2px;
+    border-radius: 2px 2px;
+ }
+ .voucher-cart .checkbox i:checked i {
+     background-color: #dc3545;
+     margin: 2px 2px;
+ }
+
+ #table-voucher-cart{
+     width: 100%;
+     background-color: rgb(255, 255, 255);
+     border-collapse: collapse;
+ }
+
+ .voucher-cart td, th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 20px;
+  }
+
+  #voucher{
+      width: 50%;
+  }
+
+  .voucher {
+      display: flex;
+      align-items: center;
+  }
+
+  .voucher .img-voucher-description{
+    display: flex;
+    align-items: center;
+  }
+
+  .voucher img{
+    width: 100px;
+    height: 70px;
+    object-fit: contain;
+    /* border-radius: 20px; */
+
+  }
+
+ .quantity .input-group{
+      width: 110px;
+  }
+
+  .price{
+      width: 30%;
+  }
+
+  .quantity{
+    width: 20%;
+}
+
+ .quantity .input-group input, button{
+     height: 33px;
+ }
+
+/* .btn_delete{
+     position: absolute;
+        margin-top: -30px;
+        margin-left: 150px;
+ } */
+
+
+
+/* Part 2.2: total-cart */
+.total-cart{
+    width: 35%;
+    /* height: 500px; */
+    background: #ebf2f5;
+    font-size: 13px;
+}
+
+/* css for checkbox */
+.total-cart .checkbox input[type=checkbox]{
+    display: none;
+ 
+ }
+ .total-cart .checkbox i{
+     height: 18px;
+     width: 18px;
+     display: inline-block;
+     border: 2px solid #dc3545;
+     border-radius: 2px;
+    position: relative;
+ }
+ 
+ /* hover checkbox */
+ .total-cart.checkbox:hover{
+     cursor: pointer;
+ }
+ 
+ .total-cart .checkbox:hover i{
+     border-color: #dc3545;
+ }
+ 
+ .total-cart .checkbox input[type="checkbox"]:checked + i::after{
+     content: "";
+     position: absolute;
+     height: 9.5px;
+     width: 10px;
+     background: #dc3545;
+    top: 2.2px;
+    left: 2px;
+    border-radius: 2px 2px;
+ }
+ .total-cart .checkbox i:checked i {
+     background-color: #dc3545;
+     margin: 2px 2px;
+ }
+
+.pay-voucher {
+    width: 90%;
+    height: 340px;
+    background-color: #ffffff;
+    /* border: #ebf2f5 10px solid; */
+    /* border-radius: 5%; */
+    
+    margin: 0px 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#pay-voucher{
+    width: 100%;
+}
+
+#title-payvoucher{
+    width: 40%;
+}
+
+#input-voucher{
+    width: 60%;
+}
+
+#pay-voucher tr, td{
+    padding: 15px;
+}
+
+.discount{
+    position: relative;
+    top: 30px;
+    /* bottom: 50px; */
+    width: 90%;
+    height: 250px;
+    background-color: #ffffff;
+    /* border: #ebf2f5 10px solid; */
+    /* border-radius: 5%; */
+    padding: 20px;
+    margin: 0px 25px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.discount input{
+    height: 40px;
+    border-radius: 5px #fff solid;
+
+}
+
+
+/* Responsive */
+
+@media(max-width: 930px) {
+    .container-fluid.body-main {
+        display: block;
+    }
+
+    .container-fluid.body-main .voucher-cart {
+        width: 100%;
+    }
+
+    .container-fluid.body-main .total-cart {
+        width: 100%;
+    }
+
+    .total-cart{
+        position: relative;
+        top: 50px;
+    }
+
+    .pay-voucher {
+        width: 100%;
+        height: 340px;
+        background-color: #ffffff;
+        /* border: #ebf2f5 10px solid; */
+        /* border-radius: 5%; */
+        margin: 0 auto;
+    }
+
+    .discount{
+        position: relative;
+    top: 30px;
+    /* bottom: 50px; */
+    width: 100%;
+    height: 250px;
+    background-color: #ffffff;
+    /* border: #ebf2f5 10px solid; */
+    /* border-radius: 5%; */
+    padding: 20px;
+    margin: 0px auto;
+    }
+}
+
+@media(max-width: 630px){
+    .voucher .img-voucher-description{
+        display: block;
+        /* align-items: center; */
+      }
+
+     .voucher-cart td, th {
+        border-bottom: 1px solid #dddddd;
+        text-align: left;
+        padding: 30px;
+      }
+
+      .voucher{
+          width: 40%;
+      }
+      .voucher img{
+        width: 150px;
+        height: 90px;
+        object-fit: cover;
+      }
+
+      .pay-voucher {
+        width: 100%;
+        height: 340px;
+        background-color: #ffffff;
+        /* border: #ebf2f5 10px solid; */
+        margin: 0 auto;
+    }
+    
+}   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.container-fluid.footer{
+    margin: auto;
+    background-color: #0F3460;
+}
+.row.row_footer{
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.frame{
+    height: 100%;
+    width: 80%;
+}
+.logo_footer{
+    width: 80%;
+    height: 180px;
+    
+}
+.text-uppercase{
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.text_reset{
+    font-family: 'Varela Round', sans-serif;
+    color: #AEB4BE !important;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+}
+.footer_icon{
+    height: 20px;
+    margin-bottom: 20px;
+}
+.footer_icon a, .footer_icon a:hover  {
+  text-decoration: none;
+}
+.footer_icon .iconify{
+    margin-right: 20px;
+    width: 20px;
+    height: 20px;
+    color: white !important;
+}
+.footer_icon .iconify:hover{
+    opacity: 0.6;
+}
+
+.contract, .aboutus, .image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .category-list-col{
+        margin : 7px 0;
+    }
+    .category-list-row{
+        margin-top: 0px;
+    }
+    .contract, .aboutus{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .image {
+        display: none;
+    }
+  }
+
+
+
+
