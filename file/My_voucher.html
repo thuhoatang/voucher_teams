@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Boostrap -->
+     <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap-grid.min.css">
+     <link rel="stylesheet" href="../bootstrap/bootstrap-4.6.0-dist/css/bootstrap.css">
+     <!-- link font-icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- Font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="../style/Myvoucher-style/Myvoucher-resp.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>My voucher</title>
+</head>
+<body>
+    <!-- Part 1:  Header -->
+    <div class="container-fluid header bg-white" id="site-header">
+        <div class="row">
+            <div class="col container_logo_header d-flex">
+                <a href="../index.html" class="mx-0">
+                    <img class="img_logo_header  ml-4  my-3 d-none d-lg-block d-xl-block d-md-none" src="../image/landing/header/logo_header.png" alt="">
+                </a>
+                <button  id="btn-category" type="button" class="btn btn-outline-danger px-2 my-3 ml-2"><span class="iconify" data-icon="bi:list-ul" style="color: #e94560; font-size:20px;"></span></button>
+            </div>
+            <div class="search_bar col-4 col-md-6 col-xl-6 col-lg-6 col-sm-6">
+                <div class="container_input input-group my-3">
+                    <div class="input-group-prepend">
+                      <span class="btn input-group-text bg-white" id="basic-addon1"><span class="iconify" data-icon="bx:bx-search-alt-2" style="color: #615757;"></span></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                  
+            </div>
+            <div class="col d-flex">
+                <button onclick="openNav()"  id="btn-cart"   type="button" class="btn btn_cart rounded-circle my-3 mx-4"><span class="iconify" data-icon="eva:shopping-cart-fill" style="color: white; font-size:20px;"></span>
+                </button>
+                <button id="btn-user02" type="button" class="btn btn_user rounded-circle my-3 mx-4"><span class="iconify" data-icon="bx:bxs-user" style="color: white; font-size:20px;"></span></button>
+                
+            </div>
+                  
+            
+        </div>
+        <div class="row container_menu_header">
+            <div class="col"></div>
+            <div class="col-xl-7 col-lg-7 col-md-10 d-sm-none d-none d-md-block">
+                <ul class="d-flex">
+                    <li class="mx-5"><a class="text-dark" href="file/home.html">Home</a></li>
+                    <li class="mr-5"><a class="text-dark" href="#">Voucher</a></li>
+                    <li class="mr-5"><a class="text-dark" href="#">Store</a></li>
+                    <li class="mr-5"><a class="text-dark" href="#">About us</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <ul class="list-group border-0 w-100 border-0 col-lg-4 col-xl-4 col-md-6 col-sm-12 col-12" id="listview-category">
+            <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="akar-icons:shopping-bag" style="font-size: 25px;"></span>Fashion</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="dashicons:food" style="font-size: 25px;"></span>Food</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5"  data-icon="ion:fitness" style="font-size: 27px;"></span>Fitness</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="fa-solid:gifts" style="font-size: 23px;"></span>Gifts</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5"  data-icon="simple-icons:yourtraveldottv" style="font-size: 25px;"></span>Travel</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="clarity:car-solid" style="font-size: 25px;"></span>Bike</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="fa-solid:headphones" style="font-size: 25px;"></span>Technological</li>
+                    <li class="list-group-item py-2"><span class="iconify ml-2 mr-5" data-icon="bx:bxs-baby-carriage" style="font-size: 25px;"></span>Baby</li>
+        </ul>
+        <ul class="container list-group w-100 col-md-2 col-lg-2 col-sm-3 col-sx-3 col-5 text-center" id="listview-user">
+            <li class="list-group-item"><a href="./login.html" class="text-danger">Log In</a></li>
+            <li class="list-group-item"><a href="./signup.html" class="text-danger">Register</a></li>           
+        </ul>
+    </div>
+
+     <!-- part 2: Content -->
+     <div class="container">
+        <div class="row d-flex">
+            <!-- left  -->
+            <div class="left-service">
+                <p class="text-danger ml-4 mt-3"><strong>DASHBOARD</strong></p>
+                <ul class="list-group border-0 w-100 border-0 bg-transparent" id="">
+                    <li class="list-group-item py-2 border-0 d-flex align-items-center">
+                        <span class="iconify ml-2 mr-4" data-icon="ant-design:user-outlined" data-width="24" data-height="24" style="font-size: 16px;"></span>
+                        <p style="width: 150px; margin: 15px 100px 15px 0">Profile</p>
+                    </li>
+                    <li class="list-group-item py-2 border-0 d-flex align-items-center justify-content-between">
+                        <span class="iconify ml-2 mr-4" data-icon="ant-design:shopping-cart-outlined" data-width="24" data-height="24" style="font-size: 16px;"></span>
+                        <p style="width: 150px; margin: 15px 100px 15px 0">Orders</p>
+                        <p style=" margin-bottom:0 ">12</p></li>
+                    <li class="list-group-item py-2 border-0 d-flex align-items-center justify-content-between">
+                        <span class="iconify ml-2 mr-4" data-icon="carbon:favorite" data-width="24" data-height="24" style="font-size: 16px;" >
+                        </span>
+                        <p style="width: 150px; margin: 15px 100px 15px 0">Wishlist</p>
+                        <p style=" margin-bottom:0 ">12</p>
+                    </li>
+                    <li class="list-group-item py-2 border-0 d-flex align-items-center justify-content-between">
+                        <span class="iconify ml-2 mr-4" data-icon="bx:bxs-discount" data-width="24" data-height="24">
+                        </span>
+                        <p style="width: 150px; margin: 15px 100px 15px 0">My voucher</p>
+                        <p style=" margin-bottom:0 ">12</p>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- right -->
+            <div class="right_service ">
+                <div class="my-profile">
+                    <div class="my-profile-heading d-flex">
+                        <span class="iconify" data-icon="bx:bxs-discount" data-width="60" data-height="60"></span>
+                        <h1> My voucher </h1>
+                    </div>
+                </div>
+                <!-- item -->
+                <div class="my-voucher-item">
+                    <div class="voucher-item-img">
+                        <img src="../image/Myvoucher/qrcode1.png" alt="">
+                    </div>
+                    <b>Skin care voucher at Hoa Beauty</b>
+                    <div class="voucher-item-content">
+                        <div class="item-content-tilte">
+                            <p>Shop name</p>
+                            <p>Date of payment</p>
+                            <p>Code voucher</p>
+                            <p>Price</p>
+                        </div>
+                        <div class="item-content-item">
+                            <a href=""><p>ThuThuyStore</p></a>
+                            <p>19/12/2021</p>
+                            <p>JPS12</p>
+                            <p>50000 đ</p>
+                        </div>
+                        <div class="item-content-remove">
+                            <span class="iconify" data-icon="fluent:delete-20-regular" data-width="30" data-height="30"></span>
+                            <p>Available</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 1 -->
+                <!-- <div class="profile-personal">
+                    <div class="personal-avt">
+                        <img src="../image/Userprofile/avatar.jpg" alt="">
+                    </div>
+                    <div class="personal-information">
+                        <b class="personal-name">
+                            Nguyen Thi Thu Thuy
+                        </b>
+                        <p class="personal-adress">
+                            48 - Cao Thang
+                        </p>
+                        <p class="personal-email">
+                            thuthuyxh1311@gmail.com
+                        </p>
+                    </div>
+                </div> -->
+                <!-- Item 2 -->
+                <!-- <div class="profile-personal-name">
+                    <div class="personal-name-tilte">
+                        <p>First name</p>
+                        <p>Last name</p>
+                        <p>Date of birth</p>
+                        <p>Phone number</p>
+                    </div>
+                    <div class="personal-name-item">
+                        <p>Nguyen Thi</p>
+                        <p>Thu Thuy</p>
+                        <p>16/01/2001</p>
+                        <p>0382319028</p>
+                    </div>
+                </div> -->
+                <!-- Item 3  -->
+                <!-- <div class="profile-personal-adress">
+                    <div class="personal-adress-tilte">
+                        <p>Adress</p>
+                    </div>
+                    <div class="personal-adress-item">
+                        <p>48 - Cao Thang- Hai Chau - Da Nang</p>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Part 3: Footer -->
+    <div class="container-fluid footer mt-5">
+        <div class="row row_footer">
+            <div class="col-lg-4 col-md-4 col-sm-12 image">
+                <div class="frame">
+                    <img class="logo_footer" src="../image/landing/footer/logo-footer.png" alt="logo-footer">
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 contract">
+                <div class="frame">
+                    <h6 class="text-uppercase fw-bold">
+                        Contact Us
+                    </h6>
+                    <p>
+                    <a href="#!" class="text_reset">36 Ong Ich Khiem,Da nang,  VietNam</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Email: yourvoucher.help@gmail.com</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Phone: +84 905 589 210 </a>
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 aboutus">
+                <div class="frame">
+                    <h6 class="text-uppercase fw-bold">
+                        About us
+                    </h6>
+                    <p>
+                    <a href="#!" class="text_reset">Our store</a>
+                    </p>
+                    <p>
+                    <a href="#!" class="text_reset">Your voucher</a>
+                    </p>
+                    <div class="footer_icon">
+                        <a href="">
+                            <span class="iconify " data-icon="bx:bxl-facebook-circle"  ></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="ant-design:twitter-circle-filled" data-width="24" data-height="24"></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="akar-icons:instagram-fill" data-width="24" data-height="24"></span>
+                        </a>
+                        <a href="">
+                            <span class="iconify" data-icon="akar-icons:google-contained-fill" data-width="24" data-height="24"></span>
+                            </span>
+                         </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/home.js"></script>
+    <script src="https://code.iconify.design/2/2.0.4/iconify.min.js"></script>
+    <script type="text/javascript" src="bootstrap/bootstrap-4.6.0-dist/js/bootstrap.js"></script>
+</body>
+</html>
