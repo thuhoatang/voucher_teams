@@ -257,7 +257,7 @@ body{
 /* Part 2.2: total-cart */
 .total-cart{
     width: 35%;
-    /* height: 500px; */
+    height: 690px;
     background: #ebf2f5;
     font-size: 14px;
 }
@@ -298,6 +298,10 @@ body{
  .total-cart .checkbox i:checked i {
      background-color: #dc3545;
      margin: 2px 2px;
+ }
+
+ #title-chooseAll{
+    font-size: 16px; font-weight: bold; border-bottom: 1px solid #dddddd;
  }
 
 .pay-voucher {
