@@ -193,8 +193,8 @@ body{
     box-shadow:  -1px -1px 1px #ccc, 1px 1px 1px #ccc;
 }
 .voucher-item-img{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     float: left;
 }
 .voucher-item-img img{
@@ -203,10 +203,29 @@ body{
     object-fit: cover;
 }
 .voucher-item-content{
-    display: flex;
-    justify-content: space-between;
+
 }
 .item-content-tilte{
+    /* width: 90%;*/
+    display: flex; 
+    justify-content: space-between;
+} 
+.item-content-item{
+    display: flex; 
+    justify-content: space-between;
+    justify-items: center;
+}
+.item-content-tilte p, .item-content-item p, .item-content-item a {
+    width: 23%;
+}
+.item-content-remove{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item-content-remove .iconify{
+    margin-bottom: 12px;
 
 }
 /*  
