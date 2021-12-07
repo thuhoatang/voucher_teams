@@ -227,7 +227,7 @@ body{
     height: 70px;
     object-fit: contain;
     /* border-radius: 20px; */
-
+    border: 0.5px #757575 solid;
   }
 
  .quantity .input-group{
@@ -407,6 +407,7 @@ body{
         width: 150px;
         height: 90px;
         object-fit: cover;
+        border: 0.5px #dc3545 solid;
       }
 
       .pay-voucher {
