@@ -133,7 +133,7 @@ body{
 }
 
 /* Part 2: body-main */
-.container-fluid.body-main{
+.container.body-main{
  position: relative;
  display: flex;
  justify-content: space-around;
@@ -143,10 +143,10 @@ body{
 .voucher-cart{
     position: relative;
     width: 65%;
-    /* height: 500px; */
-    background: #ffffff;
+    /* height: px; */
+    background: transparent;
     margin: 0px auto;
-    border: 1px solid rgb(230, 230, 230);
+    /* border: 1px solid rgb(230, 230, 230); */
 }
 
 .voucher-cart .voucher-title{
@@ -231,7 +231,7 @@ body{
   }
 
  .quantity .input-group{
-      width: 110px;
+      width: 100px;
   }
 
   .price{
@@ -243,7 +243,11 @@ body{
 }
 
  .quantity .input-group input, button{
-     height: 33px;
+     height: 30px;
+ }
+
+ .quantity .input-group button{
+     width: 10px;
  }
 
 /* .btn_delete{
@@ -251,6 +255,18 @@ body{
         margin-top: -30px;
         margin-left: 150px;
  } */
+
+ #icon-plus{
+     position:relative;
+     top: -5px;
+     left: -6px;
+ }
+
+ #icon-minus{
+    position:relative;
+    top: -5px;
+    left: -6px;
+ }
 
 
 
@@ -348,15 +364,15 @@ body{
 /* Responsive */
 
 @media(max-width: 930px) {
-    .container-fluid.body-main {
+    .container.body-main {
         display: block;
     }
 
-    .container-fluid.body-main .voucher-cart {
+    .container.body-main .voucher-cart {
         width: 100%;
     }
 
-    .container-fluid.body-main .total-cart {
+    .container.body-main .total-cart {
         width: 100%;
     }
 
